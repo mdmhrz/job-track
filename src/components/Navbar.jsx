@@ -27,14 +27,11 @@ const Navbar = () => {
                 </div>
                 <Link to='/' className="text-xl font-bold"><span className='text-primary'>Job</span>Track</Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
-
-            </div>
             <div className="navbar-end">
                 <ul className="menu menu-horizontal px-1 hidden lg:flex">
                     {links}
                 </ul>
-                <NavLink className='lg:hidden'>Login</NavLink>
+                <NavLink to='/login' className='lg:hidden btn btn-primary'>Login</NavLink>
             </div>
         </div>
     );
