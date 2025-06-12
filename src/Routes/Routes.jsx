@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../Root/Root";
 import Home from "../Pages/Home";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/*',
-        element: <h1>Error 404</h1>
+        Component: ErrorPage
     }
 ])
 

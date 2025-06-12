@@ -1,2 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #1B56FD;
+  --color-secondary: #211C84;
+  --color-base-200: #f3f3f3;
+  --color-base-300: #e7e7e7;
+  --color-accent: #706f6f;
+}
+
+* {
+  font-family: "Jost", sans-serif;
+}
