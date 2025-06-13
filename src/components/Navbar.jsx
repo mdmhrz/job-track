@@ -7,8 +7,8 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
-        <li><NavLink to='/register' className=''>Register</NavLink></li>
+        <li><NavLink to='/login' className='btn btn-sm btn-outline btn-primary'>Login</NavLink></li>
+        <li><NavLink to='/register' className='btn btn-sm btn-primary btn-outline'>Register</NavLink></li>
     </>
 
 
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Link to='/' className="text-xl font-bold"><span className='text-blue-600'>Job</span>Track</Link>
             </div>
             <div className="navbar-end">
-                <ul className="menu menu-horizontal px-1 hidden lg:flex">
+                <ul className="menu menu-horizontal px-1 hidden lg:flex lg:items-center lg:justify-center lg:gap-3">
                     {links}
                 </ul>
                 <NavLink to='/login' className='lg:hidden btn btn-primary'>Login</NavLink>

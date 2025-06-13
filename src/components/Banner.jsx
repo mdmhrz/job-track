@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative overflow-hidden min-h-[calc(100vh-64px)]">
+            <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex items-center">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={bannerImage}
@@ -17,12 +17,12 @@ const Banner = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
                 </div>
                 <div className="w-11/12 mx-auto py-20 relative z-10">
-                    <div className="flex flex-col md:flex-row items-center">
+                    <div className="">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="md:w-1/2 mb-10 md:mb-0"
+                            className="md:w-1/2"
                         >
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
