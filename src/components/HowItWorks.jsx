@@ -8,7 +8,7 @@ const HowItWorks = () => {
                 <div className="max-w-11/12 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            How JobTrack Works
+                            How Job Track Works
                         </h2>
                         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                             Our streamlined process helps you find and apply for your ideal

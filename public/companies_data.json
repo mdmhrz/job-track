@@ -1,0 +1,1050 @@
+[
+  {
+    "id": "comp-001",
+    "name": "OceanView Hotels & Resorts",
+    "logo": "https://example.com/logos/oceanview.png",
+    "location": "Miami, FL",
+    "website": "https://oceanviewhotels.com",
+    "industry": "Hospitality",
+    "jobs": [
+      {
+        "id": "job-001",
+        "title": "Hotel General Manager",
+        "bannerImage": "https://example.com/banners/hotel-manager.png",
+        "location": "Miami Beach, FL",
+        "salary": "$95,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Oversee all operations of our luxury beachfront property.",
+        "requirements": [
+          "10+ years hospitality management",
+          "Degree in Hotel Administration",
+          "Revenue management experience",
+          "Multilingual preferred",
+          "Excellent customer service skills"
+        ]
+      },
+      {
+        "id": "job-002",
+        "title": "Executive Chef",
+        "bannerImage": "https://example.com/banners/exec-chef.png",
+        "location": "Miami Beach, FL",
+        "salary": "$85,000 - $110,000",
+        "jobType": "Full-time",
+        "description": "Lead our culinary team and design seasonal menus.",
+        "requirements": [
+          "Culinary degree or equivalent",
+          "8+ years fine dining experience",
+          "Menu costing knowledge",
+          "Food safety certification",
+          "Creative plating skills"
+        ]
+      },
+      {
+        "id": "job-003",
+        "title": "Spa Director",
+        "bannerImage": "https://example.com/banners/spa-director.png",
+        "location": "Miami Beach, FL",
+        "salary": "$70,000 - $90,000",
+        "jobType": "Full-time",
+        "description": "Manage our luxury spa and wellness center.",
+        "requirements": [
+          "5+ years spa management",
+          "Knowledge of holistic therapies",
+          "Staff training experience",
+          "Retail sales background",
+          "Certified massage therapist"
+        ]
+      },
+      {
+        "id": "job-004",
+        "title": "Events Coordinator",
+        "bannerImage": "https://example.com/banners/events-coord.png",
+        "location": "Miami Beach, FL",
+        "salary": "$50,000 - $65,000",
+        "jobType": "Full-time",
+        "description": "Plan and execute weddings and corporate events.",
+        "requirements": [
+          "3+ years event planning",
+          "Vendor management skills",
+          "Budgeting experience",
+          "Weekend availability",
+          "CRM software proficiency"
+        ]
+      },
+      {
+        "id": "job-005",
+        "title": "Director of Sales",
+        "bannerImage": "https://example.com/banners/sales-director.png",
+        "location": "Miami Beach, FL",
+        "salary": "$110,000 - $140,000",
+        "jobType": "Full-time",
+        "description": "Lead our sales team and develop revenue strategies.",
+        "requirements": [
+          "8+ years hospitality sales",
+          "Proven track record in luxury market",
+          "Strong industry contacts",
+          "Revenue management expertise",
+          "Leadership experience"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-002",
+    "name": "Harvest Fields Organic Farms",
+    "logo": "https://example.com/logos/harvestfields.png",
+    "location": "Salinas, CA",
+    "website": "https://harvestfieldsorganic.com",
+    "industry": "Agriculture",
+    "jobs": [
+      {
+        "id": "job-006",
+        "title": "Farm Operations Manager",
+        "bannerImage": "https://example.com/banners/farm-manager.png",
+        "location": "Salinas, CA",
+        "salary": "$75,000 - $90,000",
+        "jobType": "Full-time",
+        "description": "Manage daily operations of 200-acre organic farm.",
+        "requirements": [
+          "Degree in Agriculture or 5+ years experience",
+          "Organic certification knowledge",
+          "Equipment operation skills",
+          "Spanish fluency preferred",
+          "Problem-solving abilities"
+        ]
+      },
+      {
+        "id": "job-007",
+        "title": "Sustainability Coordinator",
+        "bannerImage": "https://example.com/banners/sustainability.png",
+        "location": "Salinas, CA",
+        "salary": "$60,000 - $75,000",
+        "jobType": "Full-time",
+        "description": "Implement and monitor sustainable farming practices.",
+        "requirements": [
+          "Environmental science background",
+          "Knowledge of regenerative agriculture",
+          "Data collection skills",
+          "Grant writing experience",
+          "Passion for eco-friendly practices"
+        ]
+      },
+      {
+        "id": "job-008",
+        "title": "Farm-to-Market Specialist",
+        "bannerImage": "https://example.com/banners/farm-market.png",
+        "location": "Salinas, CA",
+        "salary": "$55,000 - $70,000",
+        "jobType": "Full-time",
+        "description": "Coordinate distribution to restaurants and markets.",
+        "requirements": [
+          "Supply chain experience",
+          "Food safety knowledge",
+          "Sales background",
+          "Driver's license",
+          "Early morning availability"
+        ]
+      },
+      {
+        "id": "job-009",
+        "title": "Agricultural Technician",
+        "bannerImage": "https://example.com/banners/ag-tech.png",
+        "location": "Salinas, CA",
+        "salary": "$45,000 - $55,000",
+        "jobType": "Full-time",
+        "description": "Support crop production and soil health initiatives.",
+        "requirements": [
+          "2+ years farming experience",
+          "Physical stamina",
+          "Basic mechanical skills",
+          "Willingness to work outdoors",
+          "Team player attitude"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-003",
+    "name": "MetroHealth Systems",
+    "logo": "https://example.com/logos/metrohealth.png",
+    "location": "Chicago, IL",
+    "website": "https://metrohealth.org",
+    "industry": "Healthcare",
+    "jobs": [
+      {
+        "id": "job-010",
+        "title": "Registered Nurse (ICU)",
+        "bannerImage": "https://example.com/banners/icu-nurse.png",
+        "location": "Chicago, IL",
+        "salary": "$75,000 - $95,000",
+        "jobType": "Full-time",
+        "description": "Provide critical care to ICU patients in Level I trauma center.",
+        "requirements": [
+          "Active RN license",
+          "2+ years ICU experience",
+          "ACLS certification",
+          "Strong assessment skills",
+          "Compassionate patient care"
+        ]
+      },
+      {
+        "id": "job-011",
+        "title": "Physical Therapist",
+        "bannerImage": "https://example.com/banners/pt.png",
+        "location": "Chicago, IL",
+        "salary": "$80,000 - $100,000",
+        "jobType": "Full-time",
+        "description": "Develop rehabilitation plans for diverse patient population.",
+        "requirements": [
+          "DPT degree",
+          "State licensure",
+          "Orthopedic experience",
+          "Manual therapy skills",
+          "Excellent bedside manner"
+        ]
+      },
+      {
+        "id": "job-012",
+        "title": "Medical Records Specialist",
+        "bannerImage": "https://example.com/banners/records.png",
+        "location": "Chicago, IL",
+        "salary": "$45,000 - $60,000",
+        "jobType": "Full-time",
+        "description": "Maintain accurate patient records and ensure HIPAA compliance.",
+        "requirements": [
+          "RHIT certification",
+          "2+ years medical records experience",
+          "Knowledge of EHR systems",
+          "Attention to detail",
+          "Discretion with sensitive information"
+        ]
+      },
+      {
+        "id": "job-013",
+        "title": "Hospital Administrator",
+        "bannerImage": "https://example.com/banners/hospital-admin.png",
+        "location": "Chicago, IL",
+        "salary": "$120,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Oversee hospital operations and strategic planning.",
+        "requirements": [
+          "MHA or MBA in Healthcare",
+          "5+ years leadership experience",
+          "Budget management skills",
+          "Knowledge of healthcare regulations",
+          "Strong decision-making ability"
+        ]
+      },
+      {
+        "id": "job-014",
+        "title": "Radiology Technician",
+        "bannerImage": "https://example.com/banners/rad-tech.png",
+        "location": "Chicago, IL",
+        "salary": "$65,000 - $85,000",
+        "jobType": "Full-time",
+        "description": "Perform diagnostic imaging procedures.",
+        "requirements": [
+          "ARRT certification",
+          "State licensure",
+          "Experience with CT/MRI",
+          "Patient positioning expertise",
+          "Radiation safety knowledge"
+        ]
+      },
+      {
+        "id": "job-015",
+        "title": "Nutritionist",
+        "bannerImage": "https://example.com/banners/nutritionist.png",
+        "location": "Chicago, IL",
+        "salary": "$60,000 - $75,000",
+        "jobType": "Part-time",
+        "description": "Provide dietary counseling to patients.",
+        "requirements": [
+          "RD certification",
+          "Clinical nutrition experience",
+          "Counseling skills",
+          "Knowledge of therapeutic diets",
+          "Empathetic communication"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-004",
+    "name": "Summit Construction Group",
+    "logo": "https://example.com/logos/summitconstruction.png",
+    "location": "Denver, CO",
+    "website": "https://summitconstruction.com",
+    "industry": "Construction",
+    "jobs": [
+      {
+        "id": "job-016",
+        "title": "Project Manager",
+        "bannerImage": "https://example.com/banners/construction-pm.png",
+        "location": "Denver, CO",
+        "salary": "$90,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Manage commercial construction projects from start to finish.",
+        "requirements": [
+          "5+ years construction management",
+          "OSHA 30 certification",
+          "Blueprint reading skills",
+          "Budget management experience",
+          "Strong leadership abilities"
+        ]
+      },
+      {
+        "id": "job-017",
+        "title": "Site Superintendent",
+        "bannerImage": "https://example.com/banners/superintendent.png",
+        "location": "Denver, CO",
+        "salary": "$80,000 - $100,000",
+        "jobType": "Full-time",
+        "description": "Oversee daily construction site operations.",
+        "requirements": [
+          "10+ years field experience",
+          "Knowledge of safety protocols",
+          "Subcontractor management",
+          "Problem-solving skills",
+          "Ability to read plans"
+        ]
+      },
+      {
+        "id": "job-018",
+        "title": "Estimator",
+        "bannerImage": "https://example.com/banners/estimator.png",
+        "location": "Denver, CO",
+        "salary": "$75,000 - $95,000",
+        "jobType": "Full-time",
+        "description": "Prepare accurate cost estimates for construction projects.",
+        "requirements": [
+          "3+ years construction estimating",
+          "Proficiency in estimating software",
+          "Material knowledge",
+          "Attention to detail",
+          "Bidding experience"
+        ]
+      },
+      {
+        "id": "job-019",
+        "title": "Carpenter",
+        "bannerImage": "https://example.com/banners/carpenter.png",
+        "location": "Denver, CO",
+        "salary": "$55,000 - $75,000",
+        "jobType": "Full-time",
+        "description": "Perform skilled carpentry work on commercial projects.",
+        "requirements": [
+          "5+ years experience",
+          "Own tools",
+          "Formwork experience",
+          "Blueprint reading",
+          "Reliable transportation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-005",
+    "name": "BlueHorizon Airlines",
+    "logo": "https://example.com/logos/bluehorizon.png",
+    "location": "Dallas, TX",
+    "website": "https://flybluehorizon.com",
+    "industry": "Aviation",
+    "jobs": [
+      {
+        "id": "job-020",
+        "title": "Commercial Pilot",
+        "bannerImage": "https://example.com/banners/pilot.png",
+        "location": "Various Bases",
+        "salary": "$120,000 - $250,000",
+        "jobType": "Full-time",
+        "description": "Fly domestic routes for our growing airline.",
+        "requirements": [
+          "ATP certificate",
+          "1500+ flight hours",
+          "First Class Medical",
+          "Type rating preferred",
+          "Clean safety record"
+        ]
+      },
+      {
+        "id": "job-021",
+        "title": "Flight Attendant",
+        "bannerImage": "https://example.com/banners/fa.png",
+        "location": "Various Bases",
+        "salary": "$45,000 - $65,000",
+        "jobType": "Full-time",
+        "description": "Ensure passenger safety and comfort on flights.",
+        "requirements": [
+          "2+ years customer service",
+          "CPR certification",
+          "Flexible schedule",
+          "Professional appearance",
+          "Multilingual a plus"
+        ]
+      },
+      {
+        "id": "job-022",
+        "title": "Aircraft Mechanic",
+        "bannerImage": "https://example.com/banners/mechanic.png",
+        "location": "Dallas, TX",
+        "salary": "$70,000 - $90,000",
+        "jobType": "Full-time",
+        "description": "Perform maintenance on Boeing 737 fleet.",
+        "requirements": [
+          "A&P license",
+          "3+ years commercial experience",
+          "Line maintenance knowledge",
+          "Troubleshooting skills",
+          "Attention to detail"
+        ]
+      },
+      {
+        "id": "job-023",
+        "title": "Ramp Agent",
+        "bannerImage": "https://example.com/banners/ramp.png",
+        "location": "Dallas, TX",
+        "salary": "$35,000 - $45,000",
+        "jobType": "Full-time",
+        "description": "Handle ground operations for aircraft.",
+        "requirements": [
+          "Ability to lift 70 lbs",
+          "Driver's license",
+          "Work in all weather",
+          "Team player",
+          "Flexible schedule"
+        ]
+      },
+      {
+        "id": "job-024",
+        "title": "Customer Service Agent",
+        "bannerImage": "https://example.com/banners/csa.png",
+        "location": "Dallas, TX",
+        "salary": "$38,000 - $50,000",
+        "jobType": "Full-time",
+        "description": "Assist passengers with check-in and boarding.",
+        "requirements": [
+          "2+ years customer service",
+          "Computer skills",
+          "Problem-solving ability",
+          "Professional demeanor",
+          "Early/late shift availability"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-006",
+    "name": "Bright Minds Publishing",
+    "logo": "https://example.com/logos/brightminds.png",
+    "location": "New York, NY",
+    "website": "https://brightmindspub.com",
+    "industry": "Publishing",
+    "jobs": [
+      {
+        "id": "job-025",
+        "title": "Acquisitions Editor",
+        "bannerImage": "https://example.com/banners/editor.png",
+        "location": "New York, NY",
+        "salary": "$65,000 - $85,000",
+        "jobType": "Full-time",
+        "description": "Acquire and develop educational content for K-12 market.",
+        "requirements": [
+          "Degree in Education or English",
+          "3+ years publishing experience",
+          "Strong editorial skills",
+          "Author network",
+          "Market trend knowledge"
+        ]
+      },
+      {
+        "id": "job-026",
+        "title": "Graphic Designer",
+        "bannerImage": "https://example.com/banners/designer-pub.png",
+        "location": "New York, NY",
+        "salary": "$60,000 - $75,000",
+        "jobType": "Full-time",
+        "description": "Design textbook layouts and educational materials.",
+        "requirements": [
+          "Portfolio required",
+          "Adobe Creative Suite mastery",
+          "Typography skills",
+          "2+ years design experience",
+          "Attention to detail"
+        ]
+      },
+      {
+        "id": "job-027",
+        "title": "Marketing Coordinator",
+        "bannerImage": "https://example.com/banners/marketing-pub.png",
+        "location": "New York, NY",
+        "salary": "$55,000 - $70,000",
+        "jobType": "Full-time",
+        "description": "Develop campaigns for educational products.",
+        "requirements": [
+          "2+ years marketing experience",
+          "Social media skills",
+          "Event planning experience",
+          "Excellent writing skills",
+          "Creative thinking"
+        ]
+      },
+      {
+        "id": "job-028",
+        "title": "Sales Representative",
+        "bannerImage": "https://example.com/banners/sales-pub.png",
+        "location": "Remote (Northeast)",
+        "salary": "$60,000 + commission",
+        "jobType": "Full-time",
+        "description": "Sell educational materials to school districts.",
+        "requirements": [
+          "3+ years sales experience",
+          "Education market knowledge",
+          "Strong presentation skills",
+          "Self-motivated",
+          "Willingness to travel"
+        ]
+      },
+      {
+        "id": "job-029",
+        "title": "Digital Content Specialist",
+        "bannerImage": "https://example.com/banners/digital-pub.png",
+        "location": "New York, NY",
+        "salary": "$70,000 - $85,000",
+        "jobType": "Full-time",
+        "description": "Develop interactive educational content.",
+        "requirements": [
+          "HTML/CSS knowledge",
+          "Learning management system experience",
+          "Content authoring tools",
+          "Instructional design background",
+          "Tech-savvy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-007",
+    "name": "TerraFirma Law Group",
+    "logo": "https://example.com/logos/terrafirma.png",
+    "location": "Washington, DC",
+    "website": "https://terrafirmalaw.com",
+    "industry": "Legal Services",
+    "jobs": [
+      {
+        "id": "job-030",
+        "title": "Corporate Attorney",
+        "bannerImage": "https://example.com/banners/corp-law.png",
+        "location": "Washington, DC",
+        "salary": "$180,000 - $250,000",
+        "jobType": "Full-time",
+        "description": "Handle mergers and acquisitions for corporate clients.",
+        "requirements": [
+          "JD from accredited law school",
+          "DC bar admission",
+          "5+ years corporate law",
+          "M&A experience",
+          "Excellent negotiation skills"
+        ]
+      },
+      {
+        "id": "job-031",
+        "title": "Paralegal",
+        "bannerImage": "https://example.com/banners/paralegal.png",
+        "location": "Washington, DC",
+        "salary": "$60,000 - $75,000",
+        "jobType": "Full-time",
+        "description": "Support attorneys with case preparation and research.",
+        "requirements": [
+          "Paralegal certificate",
+          "3+ years experience",
+          "Legal research skills",
+          "Document management",
+          "Discretion with confidential info"
+        ]
+      },
+      {
+        "id": "job-032",
+        "title": "Legal Secretary",
+        "bannerImage": "https://example.com/banners/legal-sec.png",
+        "location": "Washington, DC",
+        "salary": "$50,000 - $65,000",
+        "jobType": "Full-time",
+        "description": "Provide administrative support to legal team.",
+        "requirements": [
+          "Legal office experience",
+          "Typing 70+ WPM",
+          "Calendar management",
+          "Professional communication",
+          "Organizational skills"
+        ]
+      },
+      {
+        "id": "job-033",
+        "title": "Compliance Specialist",
+        "bannerImage": "https://example.com/banners/compliance.png",
+        "location": "Washington, DC",
+        "salary": "$90,000 - $110,000",
+        "jobType": "Full-time",
+        "description": "Ensure client compliance with financial regulations.",
+        "requirements": [
+          "JD or compliance certification",
+          "3+ years regulatory experience",
+          "Attention to detail",
+          "Analytical skills",
+          "Knowledge of SEC regulations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-008",
+    "name": "Golden Years Retirement Communities",
+    "logo": "https://example.com/logos/goldenyears.png",
+    "location": "Phoenix, AZ",
+    "website": "https://goldenyearsliving.com",
+    "industry": "Senior Living",
+    "jobs": [
+      {
+        "id": "job-034",
+        "title": "Activities Director",
+        "bannerImage": "https://example.com/banners/activities.png",
+        "location": "Phoenix, AZ",
+        "salary": "$45,000 - $60,000",
+        "jobType": "Full-time",
+        "description": "Plan engaging activities for senior residents.",
+        "requirements": [
+          "Recreation therapy background",
+          "2+ years senior care",
+          "Event planning skills",
+          "Patience and empathy",
+          "Creative programming ideas"
+        ]
+      },
+      {
+        "id": "job-035",
+        "title": "Certified Nursing Assistant",
+        "bannerImage": "https://example.com/banners/cna.png",
+        "location": "Phoenix, AZ",
+        "salary": "$35,000 - $45,000",
+        "jobType": "Full-time",
+        "description": "Provide daily care to assisted living residents.",
+        "requirements": [
+          "Active CNA license",
+          "Compassionate nature",
+          "Physical stamina",
+          "Team player",
+          "Reliable transportation"
+        ]
+      },
+      {
+        "id": "job-036",
+        "title": "Maintenance Technician",
+        "bannerImage": "https://example.com/banners/maintenance.png",
+        "location": "Phoenix, AZ",
+        "salary": "$40,000 - $55,000",
+        "jobType": "Full-time",
+        "description": "Maintain facility and respond to repair requests.",
+        "requirements": [
+          "3+ years maintenance experience",
+          "HVAC knowledge",
+          "Basic plumbing/electrical",
+          "Customer service skills",
+          "On-call availability"
+        ]
+      },
+      {
+        "id": "job-037",
+        "title": "Dietary Aide",
+        "bannerImage": "https://example.com/banners/dietary.png",
+        "location": "Phoenix, AZ",
+        "salary": "$30,000 - $38,000",
+        "jobType": "Full-time",
+        "description": "Prepare and serve meals to residents.",
+        "requirements": [
+          "Food handler's permit",
+          "Knowledge of therapeutic diets",
+          "Sanitation standards",
+          "Teamwork skills",
+          "Early morning availability"
+        ]
+      },
+      {
+        "id": "job-038",
+        "title": "Marketing Director",
+        "bannerImage": "https://example.com/banners/marketing-senior.png",
+        "location": "Phoenix, AZ",
+        "salary": "$75,000 - $95,000",
+        "jobType": "Full-time",
+        "description": "Develop strategies to attract new residents.",
+        "requirements": [
+          "5+ years marketing experience",
+          "Senior living industry knowledge",
+          "Digital marketing skills",
+          "CRM experience",
+          "Strong presentation skills"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-009",
+    "name": "UrbanStyle Fashion Group",
+    "logo": "https://example.com/logos/urbanstyle.png",
+    "location": "Los Angeles, CA",
+    "website": "https://urbanstyle.com",
+    "industry": "Fashion",
+    "jobs": [
+      {
+        "id": "job-039",
+        "title": "Fashion Designer",
+        "bannerImage": "https://example.com/banners/designer.png",
+        "location": "Los Angeles, CA",
+        "salary": "$75,000 - $100,000",
+        "jobType": "Full-time",
+        "description": "Create contemporary women's apparel collections.",
+        "requirements": [
+          "Portfolio required",
+          "5+ years design experience",
+          "Trend forecasting",
+          "Pattern making skills",
+          "Adobe Illustrator proficiency"
+        ]
+      },
+      {
+        "id": "job-040",
+        "title": "Retail Store Manager",
+        "bannerImage": "https://example.com/banners/store-manager.png",
+        "location": "Beverly Hills, CA",
+        "salary": "$65,000 + bonus",
+        "jobType": "Full-time",
+        "description": "Lead operations for flagship boutique location.",
+        "requirements": [
+          "5+ years luxury retail",
+          "Visual merchandising skills",
+          "Sales leadership",
+          "Inventory management",
+          "Client relationship building"
+        ]
+      },
+      {
+        "id": "job-041",
+        "title": "E-Commerce Specialist",
+        "bannerImage": "https://example.com/banners/ecomm.png",
+        "location": "Los Angeles, CA",
+        "salary": "$60,000 - $80,000",
+        "jobType": "Full-time",
+        "description": "Manage online store and digital marketing.",
+        "requirements": [
+          "Shopify experience",
+          "Digital marketing background",
+          "Analytics skills",
+          "Content creation",
+          "SEO knowledge"
+        ]
+      },
+      {
+        "id": "job-042",
+        "title": "Production Coordinator",
+        "bannerImage": "https://example.com/banners/production.png",
+        "location": "Los Angeles, CA",
+        "salary": "$55,000 - $70,000",
+        "jobType": "Full-time",
+        "description": "Oversee garment production timeline.",
+        "requirements": [
+          "3+ years fashion production",
+          "Vendor management",
+          "Detail-oriented",
+          "Problem-solving skills",
+          "Budget awareness"
+        ]
+      },
+      {
+        "id": "job-043",
+        "title": "Social Media Manager",
+        "bannerImage": "https://example.com/banners/social-media.png",
+        "location": "Los Angeles, CA",
+        "salary": "$70,000 - $85,000",
+        "jobType": "Full-time",
+        "description": "Develop brand voice across social platforms.",
+        "requirements": [
+          "Portfolio of successful campaigns",
+          "Content creation skills",
+          "Influencer collaboration",
+          "Analytics proficiency",
+          "Trend awareness"
+        ]
+      },
+      {
+        "id": "job-044",
+        "title": "Photographer",
+        "bannerImage": "https://example.com/banners/photographer.png",
+        "location": "Los Angeles, CA",
+        "salary": "$60,000 - $90,000",
+        "jobType": "Full-time",
+        "description": "Create visual content for marketing and e-commerce.",
+        "requirements": [
+          "Portfolio required",
+          "Studio lighting expertise",
+          "Photo editing skills",
+          "Fashion industry experience",
+          "Creative eye"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-010",
+    "name": "GreenThumb Landscaping",
+    "logo": "https://example.com/logos/greenthumb.png",
+    "location": "Portland, OR",
+    "website": "https://greenthumb.com",
+    "industry": "Landscaping",
+    "jobs": [
+      {
+        "id": "job-045",
+        "title": "Landscape Designer",
+        "bannerImage": "https://example.com/banners/landscape-design.png",
+        "location": "Portland, OR",
+        "salary": "$60,000 - $75,000",
+        "jobType": "Full-time",
+        "description": "Create sustainable landscape plans for residential clients.",
+        "requirements": [
+          "Degree in Landscape Architecture",
+          "AutoCAD proficiency",
+          "Plant knowledge",
+          "Portfolio required",
+          "Client presentation skills"
+        ]
+      },
+      {
+        "id": "job-046",
+        "title": "Irrigation Technician",
+        "bannerImage": "https://example.com/banners/irrigation.png",
+        "location": "Portland, OR",
+        "salary": "$45,000 - $60,000",
+        "jobType": "Full-time",
+        "description": "Install and maintain irrigation systems.",
+        "requirements": [
+          "2+ years irrigation experience",
+          "Backflow certification",
+          "Troubleshooting skills",
+          "Physical stamina",
+          "Valid driver's license"
+        ]
+      },
+      {
+        "id": "job-047",
+        "title": "Crew Leader",
+        "bannerImage": "https://example.com/banners/crew-lead.png",
+        "location": "Portland, OR",
+        "salary": "$50,000 - $65,000",
+        "jobType": "Full-time",
+        "description": "Lead landscaping teams on job sites.",
+        "requirements": [
+          "3+ years landscaping",
+          "Leadership experience",
+          "Equipment operation",
+          "Safety knowledge",
+          "Bilingual a plus"
+        ]
+      },
+      {
+        "id": "job-048",
+        "title": "Gardener",
+        "bannerImage": "https://example.com/banners/gardener.png",
+        "location": "Portland, OR",
+        "salary": "$40,000 - $50,000",
+        "jobType": "Full-time",
+        "description": "Maintain residential and commercial properties.",
+        "requirements": [
+          "Plant care knowledge",
+          "Pruning skills",
+          "Weed/pest management",
+          "Reliable transportation",
+          "Attention to detail"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-011",
+    "name": "Precision Auto Group",
+    "logo": "https://example.com/logos/precisionauto.png",
+    "location": "Detroit, MI",
+    "website": "https://precisionauto.com",
+    "industry": "Automotive",
+    "jobs": [
+      {
+        "id": "job-049",
+        "title": "Automotive Technician",
+        "bannerImage": "https://example.com/banners/auto-tech.png",
+        "location": "Detroit, MI",
+        "salary": "$60,000 - $85,000",
+        "jobType": "Full-time",
+        "description": "Diagnose and repair vehicles in busy dealership.",
+        "requirements": [
+          "ASE certification",
+          "3+ years experience",
+          "Diagnostic equipment",
+          "Own tools",
+          "Clean driving record"
+        ]
+      },
+      {
+        "id": "job-050",
+        "title": "Service Advisor",
+        "bannerImage": "https://example.com/banners/service-advisor.png",
+        "location": "Detroit, MI",
+        "salary": "$55,000 + commission",
+        "jobType": "Full-time",
+        "description": "Interface between customers and service department.",
+        "requirements": [
+          "2+ years automotive service",
+          "Excellent communication",
+          "Sales ability",
+          "Computer skills",
+          "Customer service focus"
+        ]
+      },
+      {
+        "id": "job-051",
+        "title": "Parts Manager",
+        "bannerImage": "https://example.com/banners/parts-manager.png",
+        "location": "Detroit, MI",
+        "salary": "$65,000 - $80,000",
+        "jobType": "Full-time",
+        "description": "Oversee parts inventory and ordering.",
+        "requirements": [
+          "3+ years parts experience",
+          "Inventory management",
+          "Vendor relations",
+          "Organizational skills",
+          "Automotive knowledge"
+        ]
+      },
+      {
+        "id": "job-052",
+        "title": "Detailer",
+        "bannerImage": "https://example.com/banners/detailer.png",
+        "location": "Detroit, MI",
+        "salary": "$35,000 - $45,000",
+        "jobType": "Full-time",
+        "description": "Prepare vehicles for delivery and sale.",
+        "requirements": [
+          "Detail-oriented",
+          "Physical stamina",
+          "Pride in work",
+          "Reliable",
+          "No experience required"
+        ]
+      },
+      {
+        "id": "job-053",
+        "title": "Sales Consultant",
+        "bannerImage": "https://example.com/banners/car-sales.png",
+        "location": "Detroit, MI",
+        "salary": "$40,000 + commission",
+        "jobType": "Full-time",
+        "description": "Sell new and pre-owned vehicles.",
+        "requirements": [
+          "Sales experience preferred",
+          "Outgoing personality",
+          "Driver's license",
+          "Evening/weekend availability",
+          "Goal-oriented"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-012",
+    "name": "Main Street Bank",
+    "logo": "https://example.com/logos/mainstreetbank.png",
+    "location": "Charlotte, NC",
+    "website": "https://mainstreetbank.com",
+    "industry": "Banking",
+    "jobs": [
+      {
+        "id": "job-054",
+        "title": "Branch Manager",
+        "bannerImage": "https://example.com/banners/branch-manager.png",
+        "location": "Charlotte, NC",
+        "salary": "$85,000 - $110,000",
+        "jobType": "Full-time",
+        "description": "Lead branch operations and sales initiatives.",
+        "requirements": [
+          "5+ years banking",
+          "2+ years management",
+          "Sales leadership",
+          "Customer service focus",
+          "Financial product knowledge"
+        ]
+      },
+      {
+        "id": "job-055",
+        "title": "Personal Banker",
+        "bannerImage": "https://example.com/banners/banker.png",
+        "location": "Charlotte, NC",
+        "salary": "$45,000 - $60,000",
+        "jobType": "Full-time",
+        "description": "Assist customers with financial needs.",
+        "requirements": [
+          "2+ years banking",
+          "Sales experience",
+          "Cash handling",
+          "NMLS registration",
+          "Professional demeanor"
+        ]
+      },
+      {
+        "id": "job-056",
+        "title": "Loan Officer",
+        "bannerImage": "https://example.com/banners/loan-officer.png",
+        "location": "Charlotte, NC",
+        "salary": "$60,000 + commission",
+        "jobType": "Full-time",
+        "description": "Originate mortgage and consumer loans.",
+        "requirements": [
+          "NMLS license",
+          "3+ years lending",
+          "Underwriting knowledge",
+          "Sales skills",
+          "Detail-oriented"
+        ]
+      },
+      {
+        "id": "job-057",
+        "title": "Fraud Analyst",
+        "bannerImage": "https://example.com/banners/fraud.png",
+        "location": "Charlotte, NC",
+        "salary": "$65,000 - $80,000",
+        "jobType": "Full-time",
+        "description": "Monitor and investigate suspicious activity.",
+        "requirements": [
+          "Banking operations experience",
+          "Analytical skills",
+          "Attention to detail",
+          "Fraud detection training",
+          "SAR filing knowledge"
+        ]
+      },
+      {
+        "id": "job-058",
+        "title": "IT Security Specialist",
+        "bannerImage": "https://example.com/banners/bank-it.png",
+        "location": "Charlotte, NC",
+        "salary": "$95,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Protect bank systems and customer data.",
+        "requirements": [
+          "CISSP certification",
+          "5+ years IT security",
+          "Banking regulations knowledge",
+          "Risk assessment",
+          "Incident response"
+        ]
+      }
+    ]
+  }
+]

@@ -17,7 +17,7 @@ const Login = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                 >
-                    Welcome Back
+                    Please Login
                 </motion.h2>
 
                 <form className="space-y-4">

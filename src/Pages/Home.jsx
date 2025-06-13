@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { use } from 'react';
 import Banner from '../components/Banner';
 import HowItWorks from '../components/HowItWorks';
+import TopCompanies from '../components/TopCompanies';
+import Stats from '../components/Stats';
 
 const Home = () => {
+
+
+
     return (
         <div >
-            <section className='max-w-11/12 mx-auto'>
-                <Banner></Banner>
-            </section>
+            <Banner></Banner>
+            <Stats></Stats>
             <HowItWorks></HowItWorks>
+            <TopCompanies></TopCompanies>
         </div>
     );
 };
