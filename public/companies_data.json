@@ -2,7 +2,7 @@
   {
     "id": "comp-001",
     "name": "OceanView Hotels & Resorts",
-    "logo": "https://example.com/logos/oceanview.png",
+    "logo": "https://www.oceanviewsantamonica.com/images/ocean-view-hotel.svg",
     "location": "Miami, FL",
     "website": "https://oceanviewhotels.com",
     "industry": "Hospitality",
@@ -92,7 +92,7 @@
   {
     "id": "comp-002",
     "name": "Harvest Fields Organic Farms",
-    "logo": "https://example.com/logos/harvestfields.png",
+    "logo": "data:image/png;base64,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",
     "location": "Salinas, CA",
     "website": "https://harvestfieldsorganic.com",
     "industry": "Agriculture",
@@ -166,7 +166,7 @@
   {
     "id": "comp-003",
     "name": "MetroHealth Systems",
-    "logo": "https://example.com/logos/metrohealth.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA45WNUaqpPtrMUXh1q4hTfUpNLCc3S2uHYg&s",
     "location": "Chicago, IL",
     "website": "https://metrohealth.org",
     "industry": "Healthcare",
@@ -272,7 +272,7 @@
   {
     "id": "comp-004",
     "name": "Summit Construction Group",
-    "logo": "https://example.com/logos/summitconstruction.png",
+    "logo": "https://img1.wsimg.com/isteam/ip/c4835ac2-1c38-4b07-8687-4c14e53b409b/securedownload%20(2).jpg/:/rs=h:800/qt=q:95",
     "location": "Denver, CO",
     "website": "https://summitconstruction.com",
     "industry": "Construction",
@@ -346,7 +346,7 @@
   {
     "id": "comp-005",
     "name": "BlueHorizon Airlines",
-    "logo": "https://example.com/logos/bluehorizon.png",
+    "logo": "https://maritime-forum.ec.europa.eu/sites/default/files/styles/embed_medium/public/2022-06/logo_azzurroblu_trasparente.png?itok=E2QxdngE",
     "location": "Dallas, TX",
     "website": "https://flybluehorizon.com",
     "industry": "Aviation",
@@ -436,7 +436,7 @@
   {
     "id": "comp-006",
     "name": "Bright Minds Publishing",
-    "logo": "https://example.com/logos/brightminds.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpl-f7pJj8l9LcnwE5m9JyIkzxVtYLSaDrnQ&s",
     "location": "New York, NY",
     "website": "https://brightmindspub.com",
     "industry": "Publishing",
@@ -526,7 +526,7 @@
   {
     "id": "comp-007",
     "name": "TerraFirma Law Group",
-    "logo": "https://example.com/logos/terrafirma.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJr4Z75QBSHz-buVONDpjsdIDY1uzUwqXkVQ&s",
     "location": "Washington, DC",
     "website": "https://terrafirmalaw.com",
     "industry": "Legal Services",
@@ -600,7 +600,7 @@
   {
     "id": "comp-008",
     "name": "Golden Years Retirement Communities",
-    "logo": "https://example.com/logos/goldenyears.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoATeBvxVwUI5BO3c1JANGM16Hhe-haSblzA&s",
     "location": "Phoenix, AZ",
     "website": "https://goldenyearsliving.com",
     "industry": "Senior Living",
@@ -690,7 +690,7 @@
   {
     "id": "comp-009",
     "name": "UrbanStyle Fashion Group",
-    "logo": "https://example.com/logos/urbanstyle.png",
+    "logo": "https://img.freepik.com/premium-vector/flat-initial-u-gradient-fashion-logo-called-urban-style_650144-5207.jpg",
     "location": "Los Angeles, CA",
     "website": "https://urbanstyle.com",
     "industry": "Fashion",
@@ -796,7 +796,7 @@
   {
     "id": "comp-010",
     "name": "GreenThumb Landscaping",
-    "logo": "https://example.com/logos/greenthumb.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-0hyI4vjGfh4eiDTEZID8ZXsNy1PbybmA5w&s",
     "location": "Portland, OR",
     "website": "https://greenthumb.com",
     "industry": "Landscaping",
@@ -870,7 +870,7 @@
   {
     "id": "comp-011",
     "name": "Precision Auto Group",
-    "logo": "https://example.com/logos/precisionauto.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5nttDk2zBCYHrIjIT01wgK71ORfGUg_wBw&s",
     "location": "Detroit, MI",
     "website": "https://precisionauto.com",
     "industry": "Automotive",
@@ -960,7 +960,7 @@
   {
     "id": "comp-012",
     "name": "Main Street Bank",
-    "logo": "https://example.com/logos/mainstreetbank.png",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPi5qI34i3fwls_oGiQKRIuO42ip5IfQw19g&s",
     "location": "Charlotte, NC",
     "website": "https://mainstreetbank.com",
     "industry": "Banking",
