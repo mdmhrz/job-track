@@ -1,23 +1,28 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { FaBriefcase, FaBuilding, FaChartLine } from 'react-icons/fa';
 
 const statsData = [
     {
         id: 1,
         value: 10000,
         label: 'Active Job Listings',
+        icon: <FaBriefcase className="text-blue-600 text-4xl" />,
     },
     {
         id: 2,
         value: 500,
         label: 'Partner Companies',
+        icon: <FaBuilding className="text-blue-600 text-4xl" />,
     },
     {
         id: 3,
         value: 85,
         label: 'Successful Placements',
         suffix: '%',
+        icon: <FaChartLine className="text-blue-600 text-4xl" />,
     },
 ];
 
@@ -36,31 +41,43 @@ const cardVariants = {
 };
 
 const Stats = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
+
     return (
-        <section className="bg-blue-50 py-20">
+        <section className="bg-gradient-to-br from-blue-100 to-blue-200 py-20">
             <div className="max-w-6xl mx-auto px-6">
                 <motion.div
+                    ref={ref}
                     variants={containerVariants}
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-10"
+                    animate={inView ? 'visible' : 'hidden'}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 >
                     {statsData.map((stat) => (
                         <motion.div
                             key={stat.id}
                             variants={cardVariants}
-                            className="bg-white p-10 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300"
+                            className="bg-white/60 backdrop-blur-lg p-10 rounded-2xl shadow-md border border-blue-200 text-center hover:scale-105 transition-transform duration-300"
                         >
-                            <h3 className="text-blue-600 text-5xl font-bold mb-2">
-                                <CountUp
-                                    end={stat.value}
-                                    duration={2}
-                                    separator=","
-                                    suffix={stat.suffix || ''}
-                                />
+                            <div className="flex justify-center mb-4">
+                                <div className="bg-white p-4 rounded-full shadow-lg ring-2 ring-blue-100">
+                                    {stat.icon}
+                                </div>
+                            </div>
+                            <h3 className="text-blue-700 text-4xl font-extrabold mb-2">
+                                {inView && (
+                                    <CountUp
+                                        end={stat.value}
+                                        duration={2}
+                                        separator=","
+                                        suffix={stat.suffix || ''}
+                                    />
+                                )}
                             </h3>
-                            <p className="text-gray-700 text-lg">{stat.label}</p>
+                            <p className="text-gray-800 text-base font-medium">{stat.label}</p>
                         </motion.div>
                     ))}
                 </motion.div>

@@ -10,7 +10,7 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
         >
-            <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="w-11/12 mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Brand Info */}
                 <div>
                     <Link to='/' className="text-xl font-bold"><span className='text-primary'>Job</span>Track</Link>

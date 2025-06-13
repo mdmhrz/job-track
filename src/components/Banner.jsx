@@ -31,7 +31,7 @@ const Banner = () => {
                                 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
                             >
                                 Find Your Dream Job with{' '}
-                                <span className="text-blue-600">JobTrack</span>
+                                <span className="text-blue-600">Job</span>Track
                             </motion.h1>
 
                             <motion.p

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const Root = () => {
     return (
         <div>
-            <header className='mb-[64px]'>
+            <header className='mb-[64px] relative'>
                 <Navbar></Navbar>
             </header>
             <main>

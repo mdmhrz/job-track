@@ -4,7 +4,7 @@ import { FaCheck, FaFile, FaFileAlt, FaSearch } from 'react-icons/fa';
 const HowItWorks = () => {
     return (
         <div>
-            <section className="bg-gray-100 py-16">
+            <section className="bg-blue-100 py-16">
                 <div className="max-w-11/12 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

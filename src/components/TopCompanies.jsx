@@ -14,9 +14,9 @@ const TopCompanies = () => {
     const visibleCompanies = showAll ? companies : companies.slice(0, 4);
 
     return (
-        <div>
+        <div className='bg-gray-100'>
             <section className="py-16">
-                <div className="container mx-auto px-4">
+                <div className="w-11/12 mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Top Companies Hiring Now
