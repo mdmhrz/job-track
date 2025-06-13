@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Company = ({ company }) => {
     return (
@@ -14,7 +15,7 @@ const Company = ({ company }) => {
                 <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
                     {company.name}
                 </h3>
-                <span className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                <span className="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full">
                     {company.industry}
                 </span>
                 <p className="text-gray-600 text-sm mt-3 flex items-center">
@@ -25,6 +26,7 @@ const Company = ({ company }) => {
                     {company.jobs.length}{" "}
                     {company.jobs.length === 1 ? "job" : "jobs"} available
                 </p>
+                <Link to={`/company-details/${company.id}`} className='btn btn-primary w-full mt-5 '>View Details</Link>
             </div>
         </div>
     );

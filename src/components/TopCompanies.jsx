@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Company from './Company';
 
 const TopCompanies = () => {
-
     const [companies, setCompanies] = useState([]);
+    const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
+        fetch('/companies_data.json')
+            .then(res => res.json())
+            .then(data => setCompanies(data));
+    }, []);
 
-        fetch('/companies_data.json').then(res => res.json()).then(data => setCompanies(data))
-
-    }, [])
-
-    // const data = fetch('/companies_data.json');
-    console.log(companies);
+    const visibleCompanies = showAll ? companies : companies.slice(0, 4);
 
     return (
         <div>
@@ -23,23 +22,26 @@ const TopCompanies = () => {
                             Top Companies Hiring Now
                         </h2>
                         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                            Discover opportunities at leading companies across various
-                            industries.
+                            Discover opportunities at leading companies across various industries.
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                        {companies.map(company => <Company key={company.id} company={company}></Company>)}
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-8">
+                        {visibleCompanies.map(company => (
+                            <Company key={company.id} company={company} />
+                        ))}
                     </div>
-                    <div className="text-center mt-12">
-                        <a
-                            href="https://readdy.ai/home/9b47f554-4e98-47d3-80d0-928c13b16819/d029c2db-a8a4-44b6-b3fb-9e38e114bd74"
-                            data-readdy="true"
-                        >
-                            <button className="bg-white hover:bg-gray-50 text-blue-600 border border-blue-600 px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-                                View All Companies
+
+                    {companies.length > 4 && (
+                        <div className="text-center mt-12">
+                            <button
+                                onClick={() => setShowAll(!showAll)}
+                                className="bg-white hover:bg-gray-50 text-blue-600 border border-blue-600 px-8 py-3 rounded-lg text-lg font-medium transition-colors duration-300 whitespace-nowrap"
+                            >
+                                {showAll ? 'Show Less' : 'View All Companies'}
                             </button>
-                        </a>
-                    </div>
+                        </div>
+                    )}
                 </div>
             </section>
         </div>
