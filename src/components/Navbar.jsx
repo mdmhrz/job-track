@@ -8,12 +8,12 @@ const Navbar = () => {
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
-        <li><NavLink to='/register'>Register</NavLink></li>
+        <li><NavLink to='/register' className=''>Register</NavLink></li>
     </>
 
 
     return (
-        <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto px-0">
+        <div className="navbar px-14 bg-base-100 shadow-sm border-b border-base-300 fixed z-20 top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,7 +25,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className="text-xl font-bold"><span className='text-primary'>Job</span>Track</Link>
+                <Link to='/' className="text-xl font-bold"><span className='text-blue-600'>Job</span>Track</Link>
             </div>
             <div className="navbar-end">
                 <ul className="menu menu-horizontal px-1 hidden lg:flex">

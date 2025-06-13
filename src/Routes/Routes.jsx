@@ -7,6 +7,8 @@ import Register from "../Pages/Register";
 import CompanyDetailsLayout from "../CompanyDetailsLayout/CompanyDetailsLayout";
 import { path } from "framer-motion/client";
 import CompanyDetails from "../Pages/CompanyDetails";
+import About from "../Pages/About";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <h1>Contacts</h1>
+                Component: Contact
             },
             {
                 path: '/login',
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/about',
+                Component: About
             }
         ]
     },
