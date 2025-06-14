@@ -1,7 +1,10 @@
 import { FaUserAlt, FaEnvelope, FaLock } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
+import { FaPhotoFilm } from "react-icons/fa6";
+import { use, useState } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 // Motion variants for clean and reusable animation logic
 const containerVariants = {
@@ -23,6 +26,63 @@ const itemVariants = {
 };
 
 const Register = () => {
+    const [nameError, setNameError] = useState('')
+
+    const navigate = useNavigate()
+    const location = useLocation();
+
+
+    const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
+
+    const handleGoogleSignUp = () => {
+        googleSignIn().then(result => {
+            const user = result.user;
+            // console.log(user);
+            navigate(`${location.state ? location.state : "/"}`)
+
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // alert(errorMessage, errorCode)
+            setError(errorCode)
+        });
+    }
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        console.log(name, photo, email, password);
+
+        if (name.length < 5) {
+            setNameError('Name should be more than 6 characters');
+            return
+        }
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                updateUser({ displayName: name, photoURL: photo }).then(() => {
+                    setUser({ ...user, displayName: name, photoURL: photo });
+                    alert('success')
+                    navigate('/')
+                }).catch((error) => {
+                    console.log(error);
+                    setUser(user)
+                    alert('failed')
+                })
+                console.log(user);
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+    }
+
     return (
         <div className="min-h-[calc(100vh-64px)] bg-base-200 flex items-center justify-center p-6">
             <motion.div
@@ -38,26 +98,28 @@ const Register = () => {
                     Create Account
                 </motion.h2>
 
-                <motion.form className="space-y-4" variants={itemVariants}>
+                <motion.form className="space-y-4" variants={itemVariants} onSubmit={handleRegister}>
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaUserAlt className="text-primary" />
-                        <input type="text" className="grow" placeholder="Full Name" />
+                        <input type="text" className="grow" placeholder="Full Name" name="name" />
+                    </label>
+
+                    <label className="input input-bordered flex items-center gap-2 w-full">
+                        <FaPhotoFilm className="text-primary" />
+                        <input type="text" className="grow" placeholder="Photo URL" name="photo" />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaEnvelope className="text-primary" />
-                        <input type="email" className="grow" placeholder="Email Address" />
+                        <input type="email" className="grow" placeholder="Email Address" name="email" />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaLock className="text-primary" />
-                        <input type="password" className="grow" placeholder="Password" />
+                        <input type="password" className="grow" placeholder="Password" name="password" />
                     </label>
 
-                    <label className="input input-bordered flex items-center gap-2 w-full">
-                        <FaLock className="text-primary" />
-                        <input type="password" className="grow" placeholder="Confirm Password" />
-                    </label>
+
 
                     <motion.button
                         type="submit"
@@ -82,10 +144,7 @@ const Register = () => {
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     variants={itemVariants}
-                    onClick={() => {
-                        // Trigger your Google auth function here
-                        console.log("Sign in with Google");
-                    }}
+                    onClick={handleGoogleSignUp}
                 >
                     <FcGoogle size={20} />
                     Continue with Google

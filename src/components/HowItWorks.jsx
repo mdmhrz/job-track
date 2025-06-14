@@ -68,7 +68,7 @@ const HowItWorks = () => {
                             className="bg-white rounded-2xl shadow-lg p-8 relative hover:shadow-2xl transition-all duration-300"
                             variants={cardVariants}
                         >
-                            <div className="absolute -top-5 -left-5 bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold shadow-lg">
+                            <div className="absolute -top-3 -left-3 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold shadow-lg">
                                 {step.id}
                             </div>
                             <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl">

@@ -54,9 +54,6 @@ const Banner = () => {
                                 <button className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium whitespace-nowrap cursor-pointer !rounded-button">
                                     Find Jobs
                                 </button>
-                                <button className="px-8 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors font-medium whitespace-nowrap cursor-pointer !rounded-button">
-                                    For Employers
-                                </button>
                             </motion.div>
                         </motion.div>
                     </div>

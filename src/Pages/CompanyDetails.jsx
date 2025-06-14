@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router'; // ✅ Fixed import
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowRight, FaExternalLinkAlt, FaLocationArrow, FaTimes } from 'react-icons/fa';
+import { IoArrowForwardCircleSharp } from 'react-icons/io5';
 
 const CompanyDetails = () => {
     const companyData = useLoaderData();
@@ -111,7 +112,7 @@ const CompanyDetails = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 80, opacity: 0 }}
                             transition={{ duration: 0.4, type: 'spring', damping: 20 }}
-                            className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-2xl relative max-h-[90vh] overflow-y-auto"
+                            className="bg-white rounded-2xl shadow-2xl p-3 md:p-6 max-w-[90vw] md:max-w-2xl relative max-h-[90vh] overflow-y-auto"
                         >
                             <button
                                 onClick={() => setSelectedJob(null)}
@@ -135,7 +136,7 @@ const CompanyDetails = () => {
                             <ul className="mt-2 text-gray-700 space-y-2">
                                 {selectedJob.requirements.map((req, i) => (
                                     <li className="flex items-start gap-2" key={i}>
-                                        <FaArrowRight className="text-green-500 mt-1" />
+                                        <IoArrowForwardCircleSharp className=" mt-1" />
                                         <span>{req}</span>
                                     </li>
                                 ))}

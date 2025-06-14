@@ -1,8 +1,55 @@
 import { FaUserAlt, FaLock, FaGoogle, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Link } from "react-router"; // ✅ Corrected import
+import { Link, useLocation, useNavigate } from "react-router"; // ✅ Corrected import
+import { useContext, useState } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
+
+    const [error, setError] = useState('')
+
+    const { signIn, googleSignIn } = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log(email, password);
+
+        signIn(email, password).then(result => {
+            const user = result.user;
+            // console.log(user);
+            navigate(`${location.state ? location.state : "/"}`)
+
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // alert(errorMessage, errorCode)
+            setError(errorCode)
+        });
+    }
+
+    const handleGoogleLogin = () => {
+        googleSignIn().then(result => {
+            const user = result.user;
+            // console.log(user);
+            navigate(`${location.state ? location.state : "/"}`)
+
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // alert(errorMessage, errorCode)
+            setError(errorCode)
+        });
+    }
+
+
+
     return (
         <div className="bg-base-200 flex items-center justify-center p-6 min-h-[calc(100vh-64px)]">
             <motion.div
@@ -17,10 +64,10 @@ const Login = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                 >
-                    Welcome Back
+                    Please Login
                 </motion.h2>
 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleLogin}>
                     <motion.label
                         className="input input-bordered flex items-center gap-2 w-full"
                         initial={{ opacity: 0, x: -20 }}
@@ -32,6 +79,7 @@ const Login = () => {
                             type="text"
                             className="grow"
                             placeholder="Username or Email"
+                            name="email"
                         />
                     </motion.label>
 
@@ -46,6 +94,7 @@ const Login = () => {
                             type="password"
                             className="grow"
                             placeholder="Password"
+                            name="password"
                         />
                     </motion.label>
 
@@ -69,23 +118,16 @@ const Login = () => {
 
                 {/* Social Login Options */}
                 <div className="mt-6">
-                    <div className="divider">OR</div>
-                    <div className="flex flex-col md:flex-row gap-3 md:w-full justify-between">
+                    <small className="divider">OR</small>
+                    <div className="">
                         <motion.button
+                            onClick={handleGoogleLogin}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
-                            className="btn btn-outline flex items-center justify-center gap-2"
+                            className="btn btn-outline btn-primary flex items-center justify-center gap-2 w-full"
                         >
-                            <FaGoogle className="text-red-500" />
-                            Login with Google
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="btn btn-outline flex items-center justify-center gap-2"
-                        >
-                            <FaGithub />
-                            Login with GitHub
+                            <FcGoogle className="text-red-500" />
+                            Continue with Google
                         </motion.button>
                     </div>
                 </div>

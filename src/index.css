@@ -20,3 +20,9 @@
 * {
   font-family: "Jost", sans-serif;
 }
+
+a.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(6, 50, 161)
+}

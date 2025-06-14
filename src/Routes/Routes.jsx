@@ -9,6 +9,9 @@ import { path } from "framer-motion/client";
 import CompanyDetails from "../Pages/CompanyDetails";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import Loading from "../Pages/Loading";
+import MyProfile from "../Pages/MyProfile";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 Component: About
+            },
+            {
+                path: '/myProfile',
+                element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             }
         ]
     },
@@ -44,9 +51,9 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/company-details/:id',
-                Component: CompanyDetails,
+                element: <PrivateRoute><CompanyDetails></CompanyDetails></PrivateRoute>,
                 loader: () => fetch('/companies_data.json').then(res => res.json()),
-                hydrateFallbackElement: <h1>Loading</h1>
+                hydrateFallbackElement: <Loading></Loading>
             }
         ]
     },
