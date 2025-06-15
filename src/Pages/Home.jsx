@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useRef } from 'react';
 import Banner from '../components/Banner';
 import HowItWorks from '../components/HowItWorks';
 import TopCompanies from '../components/TopCompanies';
@@ -7,13 +7,19 @@ import SuccessStories from '../components/SuccessStories';
 
 const Home = () => {
 
+    const topCompaniesRef = useRef(null);
 
+    const scrollToTopCompanies = () => {
+        topCompaniesRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
 
     return (
         <div>
-            <Banner></Banner>
+            <Banner onFindJobsClick={scrollToTopCompanies}></Banner>
             <HowItWorks></HowItWorks>
-            <TopCompanies></TopCompanies>
+            <div ref={topCompaniesRef}>
+                <TopCompanies></TopCompanies>
+            </div>
             <Stats></Stats>
             <SuccessStories></SuccessStories>
         </div >

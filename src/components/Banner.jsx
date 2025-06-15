@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
 import bannerImage from '../assets/bannerImage.jpg';
 
-const Banner = () => {
+const Banner = ({ onFindJobsClick }) => {
     return (
         <div>
             {/* Hero Section */}
@@ -51,7 +51,7 @@ const Banner = () => {
                                 transition={{ delay: 0.6, duration: 0.6 }}
                                 className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
                             >
-                                <button className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium whitespace-nowrap cursor-pointer !rounded-button">
+                                <button onClick={onFindJobsClick} id='top-companies' className="px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium whitespace-nowrap cursor-pointer !rounded-button">
                                     Find Jobs
                                 </button>
                             </motion.div>

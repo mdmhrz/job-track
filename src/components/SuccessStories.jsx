@@ -57,7 +57,7 @@ const SuccessStories = () => {
                         ))}
                     </div>
                     <div className="text-center mt-12">
-                        <div className="bg-blue-100 rounded-xl p-8 max-w-3xl mx-auto">
+                        <div className="border bg-blue-50 border-base-200 shadow-2xl rounded-xl p-8 max-w-3xl mx-auto">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
                                 Ready to Write Your Success Story?
                             </h3>
