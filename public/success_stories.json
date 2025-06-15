@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Sarah Johnson",
+        "role": "UX Designer at Innovatech",
+        "image": "https://randomuser.me/api/portraits/women/44.jpg",
+        "quote": "JobTrack helped me find my dream job in just two weeks! The platform made it easy to filter opportunities that matched my skills and career goals."
+    },
+    {
+        "name": "Michael Chen",
+        "role": "Data Scientist at DataSphere",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "quote": "After months of searching elsewhere, I found the perfect position through JobTrack. The detailed company profiles helped me find an organization that aligned with my values."
+    },
+    {
+        "name": "Aisha Patel",
+        "role": "Software Engineer at GreenEarth",
+        "image": "https://randomuser.me/api/portraits/women/68.jpg",
+        "quote": "The application process through JobTrack was seamless. I could easily track my applications and received timely updates from employers."
+    }
+]

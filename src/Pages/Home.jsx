@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import HowItWorks from '../components/HowItWorks';
 import TopCompanies from '../components/TopCompanies';
 import Stats from '../components/Stats';
+import SuccessStories from '../components/SuccessStories';
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
             <HowItWorks></HowItWorks>
             <TopCompanies></TopCompanies>
             <Stats></Stats>
+            <SuccessStories></SuccessStories>
         </div >
     );
 };

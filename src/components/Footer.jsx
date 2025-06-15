@@ -5,7 +5,7 @@ import { Link } from "react-router";
 export default function Footer() {
     return (
         <motion.footer
-            className="bg-gray-300 text-base-content"
+            className="bg-black text-white text-base-content"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

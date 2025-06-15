@@ -112,7 +112,7 @@ const CompanyDetails = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 80, opacity: 0 }}
                             transition={{ duration: 0.4, type: 'spring', damping: 20 }}
-                            className="bg-white rounded-2xl shadow-2xl p-3 md:p-6 max-w-[90vw] md:max-w-2xl relative max-h-[90vh] overflow-y-auto"
+                            className="relative bg-white p-6 w-10/12 md:w-6/12 max-h-[90vh] rounded-xl overflow-y-scroll"
                         >
                             <button
                                 onClick={() => setSelectedJob(null)}
