@@ -40,6 +40,11 @@ const cardVariants = {
     visible: { opacity: 1, y: 0 },
 };
 
+const textVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const Stats = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -49,8 +54,30 @@ const Stats = () => {
     return (
         <section className="bg-gradient-to-br from-blue-100 to-blue-200 py-20">
             <div className="max-w-6xl mx-auto px-6">
+                {/* Title and Subtitle */}
                 <motion.div
+                    className="text-center mb-16"
                     ref={ref}
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={containerVariants}
+                >
+                    <motion.h2
+                        className="text-4xl font-bold text-blue-700 mb-4"
+                        variants={textVariants}
+                    >
+                        Empowering Careers, One Step at a Time
+                    </motion.h2>
+                    <motion.p
+                        className="text-gray-700 text-lg md:text-xl"
+                        variants={textVariants}
+                    >
+                        Trusted by companies and professionals to connect opportunities with talent.
+                    </motion.p>
+                </motion.div>
+
+                {/* Stats Cards */}
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}

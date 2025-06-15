@@ -22,13 +22,13 @@ const Banner = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="md:w-1/2"
+                            className="md:w-1/2 xl:w-2/6"
                         >
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2, duration: 0.6 }}
-                                className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+                                className="text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6"
                             >
                                 Find Your Dream Job with{' '}
                                 <span className="text-blue-600">Job</span>Track

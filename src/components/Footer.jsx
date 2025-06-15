@@ -23,10 +23,11 @@ export default function Footer() {
                 <div>
                     <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
                     <ul className="space-y-1">
-                        <li><a className="link link-hover">Dashboard</a></li>
-                        <li><a className="link link-hover">My Applications</a></li>
-                        <li><a className="link link-hover">Saved Jobs</a></li>
-                        <li><a className="link link-hover">Profile Settings</a></li>
+                        <li><Link to='/' className="link link-hover">Home</Link></li>
+                        <li><Link to='/about' className="link link-hover">About</Link></li>
+                        <li><Link to='/contact' className="link link-hover">Contact</Link></li>
+                        <li><Link to='/login' className="link link-hover">Login</Link></li>
+                        <li><Link to='/register' className="link link-hover">Register</Link></li>
                     </ul>
                 </div>
 
