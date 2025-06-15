@@ -6,10 +6,12 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
+    const [email, setEmail] = useState('');
 
     const [error, setError] = useState('')
 
-    const { signIn, googleSignIn } = useContext(AuthContext)
+
+    const { signIn, googleSignIn, forgotPassword } = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -46,7 +48,21 @@ const Login = () => {
             // alert(errorMessage, errorCode)
             setError(errorCode)
         });
-    }
+    };
+
+    const handleForgotPassword = () => {
+        if (!email) {
+            return alert("Please enter your email to reset password.");
+        }
+
+        forgotPassword(email)
+            .then(() => {
+                alert('A reset email has been sent to your email.');
+            })
+            .catch((error) => {
+                setError(error.code);
+            });
+    };
 
 
 
@@ -80,6 +96,8 @@ const Login = () => {
                             className="grow"
                             placeholder="Username or Email"
                             name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </motion.label>
 
@@ -103,7 +121,7 @@ const Login = () => {
                             <input type="checkbox" className="checkbox checkbox-primary mr-2" />
                             Remember me
                         </label>
-                        <a className="link link-hover text-primary">Forgot Password?</a>
+                        <a onClick={handleForgotPassword} className="link link-hover text-primary">Forgot Password?</a>
                     </div>
 
                     <motion.button

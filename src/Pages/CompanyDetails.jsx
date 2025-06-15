@@ -112,11 +112,11 @@ const CompanyDetails = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 80, opacity: 0 }}
                             transition={{ duration: 0.4, type: 'spring', damping: 20 }}
-                            className="relative bg-white p-6 w-10/12 md:w-6/12 max-h-[90vh] rounded-xl overflow-y-scroll"
+                            className="relative bg-white p-6 w-10/12 md:w-6/12 max-h-[90vh] rounded-xl overflow-auto"
                         >
                             <button
                                 onClick={() => setSelectedJob(null)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition"
+                                className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition"
                             >
                                 <FaTimes size={22} />
                             </button>
