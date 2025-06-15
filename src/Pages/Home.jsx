@@ -4,7 +4,6 @@ import HowItWorks from '../components/HowItWorks';
 import TopCompanies from '../components/TopCompanies';
 import Stats from '../components/Stats';
 import SuccessStories from '../components/SuccessStories';
-import SEOFeatures from '../components/SEOFeatures';
 
 const Home = () => {
 
@@ -23,7 +22,6 @@ const Home = () => {
             </div>
             <Stats></Stats>
             <SuccessStories></SuccessStories>
-            <SEOFeatures></SEOFeatures>
         </div >
     );
 };

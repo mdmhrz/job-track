@@ -63,7 +63,7 @@ const CompanyDetails = () => {
             {/* Job Listings */}
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Available Jobs</h2>
             {company.jobs?.length > 0 ? (
-                <div className="grid xl:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6">
                     {company.jobs.map((job) => (
                         <motion.div
                             key={job.id}
@@ -112,7 +112,7 @@ const CompanyDetails = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 80, opacity: 0 }}
                             transition={{ duration: 0.4, type: 'spring', damping: 20 }}
-                            className="relative bg-white p-6 w-10/12 md:w-6/12 max-h-[90vh] rounded-xl overflow-auto"
+                            className="relative bg-white p-6 w-10/12 md:w-6/12 xl:w-5/12 max-h-[90vh] rounded-xl overflow-auto"
                         >
                             <button
                                 onClick={() => setSelectedJob(null)}

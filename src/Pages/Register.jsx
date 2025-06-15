@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaPhotoFilm } from "react-icons/fa6";
 import { use, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 // Motion variants for clean and reusable animation logic
 const containerVariants = {
@@ -26,18 +27,51 @@ const itemVariants = {
 };
 
 const Register = () => {
-    const [nameError, setNameError] = useState('')
+    const [name, setName] = useState('')
+    const [nameError, setNameError] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
     const navigate = useNavigate()
     const location = useLocation();
+    // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
 
     const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
+
+
+    const handleNameOnChange = e => {
+        const value = e.target.value;
+        setName(value);
+
+        if (value.length < 6) {
+            setNameError('Name must be 6 characters or longer')
+        }
+        else {
+            setNameError('')
+        }
+    };
+
+    const handlePasswordOnChange = e => {
+        const value = e.target.value;
+        setPassword(value);
+
+        const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if (!regex.test(value)) {
+            setPasswordError('Password must have uppercase, lowercase, and be at least 6 characters');
+        } else {
+            setPasswordError('');
+        }
+    };
+
+
 
     const handleGoogleSignUp = () => {
         googleSignIn().then(result => {
             const user = result.user;
             // console.log(user);
+            toast.success("You've created profile successfuly")
             navigate(`${location.state ? location.state : "/"}`)
 
         }).catch((error) => {
@@ -58,13 +92,19 @@ const Register = () => {
 
         console.log(name, photo, email, password);
 
-        if (name.length < 5) {
-            setNameError('Name should be more than 6 characters');
-            return
-        }
+
+        // if (passwordRegex.test(password) === false) {
+        //     setPasswordError('Password must have one lowercase, one uppercase and at lest 6 characters long')
+        //     return
+        // }
+
+
+
 
         createUser(email, password)
             .then(result => {
+
+
                 const user = result.user;
                 updateUser({ displayName: name, photoURL: photo }).then(() => {
                     setUser({ ...user, displayName: name, photoURL: photo });
@@ -101,23 +141,47 @@ const Register = () => {
                 <motion.form className="space-y-4" variants={itemVariants} onSubmit={handleRegister}>
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaUserAlt className="text-primary" />
-                        <input type="text" className="grow" placeholder="Full Name" name="name" />
+                        <input
+                            type="text"
+                            className="grow"
+                            placeholder="Full Name"
+                            name="name"
+                            required
+                            onChange={handleNameOnChange}
+                            defaultValue={name}
+
+                        />
+
                     </label>
+                    {
+                        nameError ? <small className="text-red-500">{nameError}</small> : ""
+                    }
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaPhotoFilm className="text-primary" />
                         <input type="text" className="grow" placeholder="Photo URL" name="photo" />
+
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaEnvelope className="text-primary" />
-                        <input type="email" className="grow" placeholder="Email Address" name="email" />
+                        <input type="email" className="grow" placeholder="Email Address" name="email" required />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaLock className="text-primary" />
-                        <input type="password" className="grow" placeholder="Password" name="password" />
+                        <input
+                            type="password"
+                            className="grow"
+                            placeholder="Password"
+                            name="password"
+                            onChange={handlePasswordOnChange}
+                            defaultValue={password}
+                            required />
                     </label>
+                    {
+                        passwordError ? <small className="text-red-500">{passwordError}</small> : ''
+                    }
 
 
 

@@ -1,37 +1,32 @@
-import React, { useContext, useState, useRef, useEffect } from 'react';
-import { Link, NavLink } from 'react-router';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 import { IoMdMenu } from 'react-icons/io';
-import { motion, AnimatePresence } from 'framer-motion';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [isAvatarDropdownOpen, setIsAvatarDropdownOpen] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const avatarRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         logOut()
-            .then(() => alert('You have logged out successfully'))
+            .then(() => toast.success("You've logged out successfully"))
             .catch((error) => console.error(error));
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (avatarRef.current && !avatarRef.current.contains(event.target)) {
-                setIsAvatarDropdownOpen(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+    const handleAvatarClick = () => {
+        navigate('/myprofile');
+    };
 
     const navLinks = (
         <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
+            {
+                user && <li><NavLink to='/contact'>Contact</NavLink></li>
+            }
         </>
     );
 
@@ -54,57 +49,31 @@ const Navbar = () => {
                     </ul>
 
                     {user ? (
-                        <div className="relative" ref={avatarRef}>
+                        <>
+                            <button onClick={handleLogout} className="btn btn-primary mr-3">
+                                Logout
+                            </button>
+
                             <button
-                                onClick={() => setIsAvatarDropdownOpen(!isAvatarDropdownOpen)}
+                                onClick={handleAvatarClick}
                                 className="focus:outline-none"
+                                aria-label="Go to profile"
                             >
                                 {user.photoURL ? (
                                     <img
                                         src={user.photoURL}
                                         alt="User"
-                                        className="w-10 h-10 rounded-full ring-2 ring-primary hover:scale-105 transition-transform duration-200"
+                                        className="w-10 h-10  rounded-full ring-2 ring-primary hover:scale-105 transition-transform duration-200"
                                     />
                                 ) : (
-                                    <FaUser className="text-2xl text-primary" />
+                                    <FaUser className="w-10 h-10 p-1  rounded-full ring-2 ring-primary hover:scale-105 transition-transform duration-200 text-2xl text-primary" />
                                 )}
                             </button>
-
-                            <AnimatePresence>
-                                {isAvatarDropdownOpen && (
-                                    <motion.div
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -10 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="absolute right-0 mt-3 w-56 bg-white shadow-xl rounded-xl z-50 overflow-hidden"
-                                    >
-                                        <div className="px-5 py-3 border-b font-semibold text-gray-700">
-                                            {user.displayName || 'User'}
-                                        </div>
-                                        <ul className="text-sm text-gray-600">
-                                            <li>
-                                                <Link to="/myprofile" className="block px-5 py-3 hover:bg-gray-100">
-                                                    My Profile
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <button
-                                                    onClick={handleLogout}
-                                                    className="block w-full text-left px-5 py-3 hover:bg-gray-100"
-                                                >
-                                                    Logout
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
+                        </>
                     ) : (
                         <>
-                            <Link to='/login' className='btn btn-primary'>Login</Link>
-                            <Link to='/register' className='btn btn-outline btn-primary'>Register</Link>
+                            <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
+                            <Link to='/register' className='btn btn-primary text-white'>Register</Link>
                         </>
                     )}
                 </div>

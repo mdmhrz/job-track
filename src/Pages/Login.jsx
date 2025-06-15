@@ -4,9 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router"; // ✅ Corrected 
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [email, setEmail] = useState('');
+
 
     const [error, setError] = useState('')
 
@@ -26,6 +28,7 @@ const Login = () => {
         signIn(email, password).then(result => {
             const user = result.user;
             // console.log(user);
+            toast.success("You've succefully logged in")
             navigate(`${location.state ? location.state : "/"}`)
 
         }).catch((error) => {
@@ -41,6 +44,7 @@ const Login = () => {
             const user = result.user;
             // console.log(user);
             navigate(`${location.state ? location.state : "/"}`)
+            toast.success("You've succefully logged in")
 
         }).catch((error) => {
             const errorCode = error.code;
@@ -97,6 +101,7 @@ const Login = () => {
                             placeholder="Username or Email"
                             name="email"
                             value={email}
+                            required
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </motion.label>
@@ -115,6 +120,7 @@ const Login = () => {
                             name="password"
                         />
                     </motion.label>
+
 
                     <div className="flex justify-between text-sm mt-2">
                         <label className="label cursor-pointer">
