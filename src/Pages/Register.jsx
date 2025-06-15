@@ -7,7 +7,7 @@ import { use, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
-// Motion variants for clean and reusable animation logic
+// Motion variants
 const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -27,101 +27,92 @@ const itemVariants = {
 };
 
 const Register = () => {
-    const [name, setName] = useState('')
+    const [name, setName] = useState('');
     const [nameError, setNameError] = useState('');
     const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation();
-    // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-
-
     const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
 
-
-    const handleNameOnChange = e => {
+    const handleNameOnChange = (e) => {
         const value = e.target.value;
         setName(value);
-
-        if (value.length < 6) {
-            setNameError('Name must be 6 characters or longer')
-        }
-        else {
-            setNameError('')
+        if (value.trim().length < 6) {
+            setNameError("Name must be 6 characters or longer");
+        } else {
+            setNameError("");
         }
     };
 
-    const handlePasswordOnChange = e => {
+    const handlePasswordOnChange = (e) => {
         const value = e.target.value;
         setPassword(value);
-
         const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-
         if (!regex.test(value)) {
-            setPasswordError('Password must have uppercase, lowercase, and be at least 6 characters');
+            setPasswordError("Password must have uppercase, lowercase, and be at least 6 characters");
         } else {
-            setPasswordError('');
+            setPasswordError("");
         }
     };
 
-
+    const firebaseError = (code) => {
+        switch (code) {
+            case "auth/email-already-in-use":
+                return "This email is already in use.";
+            case "auth/invalid-email":
+                return "Invalid email address.";
+            case "auth/weak-password":
+                return "Password is too weak.";
+            default:
+                return "Something went wrong. Please try again.";
+        }
+    };
 
     const handleGoogleSignUp = () => {
-        googleSignIn().then(result => {
-            const user = result.user;
-            // console.log(user);
-            toast.success("You've created profile successfuly")
-            navigate(`${location.state ? location.state : "/"}`)
-
-        }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // alert(errorMessage, errorCode)
-            setError(errorCode)
-        });
-    }
+        setLoading(true);
+        googleSignIn()
+            .then((result) => {
+                toast.success("You've created profile successfully!");
+                navigate(location.state ? location.state : "/");
+            })
+            .catch((error) => {
+                toast.error(firebaseError(error.code));
+            })
+            .finally(() => setLoading(false));
+    };
 
     const handleRegister = (e) => {
         e.preventDefault();
+        setLoading(true);
         const form = e.target;
-        const name = form.name.value;
-        const photo = form.photo.value;
-        const email = form.email.value;
-        const password = form.password.value;
-
-        console.log(name, photo, email, password);
-
-
-        // if (passwordRegex.test(password) === false) {
-        //     setPasswordError('Password must have one lowercase, one uppercase and at lest 6 characters long')
-        //     return
-        // }
-
-
-
+        const name = form.name.value.trim();
+        const photo = form.photo.value.trim();
+        const email = form.email.value.trim();
+        const password = form.password.value.trim();
 
         createUser(email, password)
-            .then(result => {
-
-
+            .then((result) => {
                 const user = result.user;
-                updateUser({ displayName: name, photoURL: photo }).then(() => {
-                    setUser({ ...user, displayName: name, photoURL: photo });
-                    alert('success')
-                    navigate('/')
-                }).catch((error) => {
-                    console.log(error);
-                    setUser(user)
-                    alert('failed')
-                })
-                console.log(user);
-            }).catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage)
-            });
-    }
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                        toast.success("Account created successfully!");
+                        navigate("/");
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        setUser(user);
+                        toast.error("Profile update failed.");
+                    });
+            })
+            .catch((error) => {
+                toast.error(firebaseError(error.code));
+            })
+            .finally(() => setLoading(false));
+    };
 
     return (
         <div className="min-h-[calc(100vh-64px)] bg-base-200 flex items-center justify-center p-6">
@@ -148,24 +139,25 @@ const Register = () => {
                             name="name"
                             required
                             onChange={handleNameOnChange}
-                            defaultValue={name}
-
+                            value={name}
                         />
-
                     </label>
-                    {
-                        nameError ? <small className="text-red-500">{nameError}</small> : ""
-                    }
+                    {nameError && <small className="text-red-500">{nameError}</small>}
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaPhotoFilm className="text-primary" />
                         <input type="text" className="grow" placeholder="Photo URL" name="photo" />
-
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
                         <FaEnvelope className="text-primary" />
-                        <input type="email" className="grow" placeholder="Email Address" name="email" required />
+                        <input
+                            type="email"
+                            className="grow"
+                            placeholder="Email Address"
+                            name="email"
+                            required
+                        />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2 w-full">
@@ -176,48 +168,40 @@ const Register = () => {
                             placeholder="Password"
                             name="password"
                             onChange={handlePasswordOnChange}
-                            defaultValue={password}
-                            required />
+                            value={password}
+                            required
+                        />
                     </label>
-                    {
-                        passwordError ? <small className="text-red-500">{passwordError}</small> : ''
-                    }
-
-
+                    {passwordError && <small className="text-red-500">{passwordError}</small>}
 
                     <motion.button
                         type="submit"
                         className="btn btn-primary w-full mt-4"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        disabled={loading || nameError || passwordError}
                     >
-                        Register
+                        {loading ? "Registering..." : "Register"}
                     </motion.button>
                 </motion.form>
 
-                <motion.div
-                    className="divider text-sm mt-6"
-                    variants={itemVariants}
-                >
+                <motion.div className="divider text-sm mt-6" variants={itemVariants}>
                     or
                 </motion.div>
 
-                {/* Google Sign In Button */}
                 <motion.button
                     className="btn btn-outline w-full flex items-center justify-center gap-2"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     variants={itemVariants}
                     onClick={handleGoogleSignUp}
+                    disabled={loading}
                 >
                     <FcGoogle size={20} />
                     Continue with Google
                 </motion.button>
 
-                <motion.div
-                    className="text-center mt-6 text-sm"
-                    variants={itemVariants}
-                >
+                <motion.div className="text-center mt-6 text-sm" variants={itemVariants}>
                     Already have an account?{" "}
                     <Link to="/login" className="link link-primary font-semibold">
                         Login

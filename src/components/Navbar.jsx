@@ -13,7 +13,7 @@ const Navbar = () => {
     const handleLogout = () => {
         logOut()
             .then(() => toast.success("You've logged out successfully"))
-            .catch((error) => console.error(error));
+            .catch((error) => toast.error(`${error}`));
     };
 
     const handleAvatarClick = () => {
@@ -24,8 +24,9 @@ const Navbar = () => {
         <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
+            <li><NavLink to='/contact'>Contact</NavLink></li>
             {
-                user && <li><NavLink to='/contact'>Contact</NavLink></li>
+                user && <li><NavLink to='/hotJobs'>Featured Jobs</NavLink></li>
             }
         </>
     );
@@ -72,8 +73,8 @@ const Navbar = () => {
                         </>
                     ) : (
                         <>
-                            <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
-                            <Link to='/register' className='btn btn-primary text-white'>Register</Link>
+                            <Link to='auth/login' className='btn btn-outline btn-primary'>Login</Link>
+                            <Link to='auth/register' className='btn btn-primary text-white'>Register</Link>
                         </>
                     )}
                 </div>
@@ -89,14 +90,14 @@ const Navbar = () => {
                         </div>
                         <ul className="space-y-4">
                             {navLinks}
-                            {!user && <li><NavLink to='/register'>Register</NavLink></li>}
+                            {!user && <li><NavLink to='/auth/register'>Register</NavLink></li>}
                             {user ? (
                                 <>
                                     <li><NavLink to="/myprofile">My Profile</NavLink></li>
                                     <li><button onClick={handleLogout}>Logout</button></li>
                                 </>
                             ) : (
-                                <li><NavLink to='/login'>Login</NavLink></li>
+                                <li><NavLink to='/auth/login'>Login</NavLink></li>
                             )}
                         </ul>
                     </div>

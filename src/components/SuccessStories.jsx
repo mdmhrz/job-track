@@ -9,7 +9,7 @@ const SuccessStories = () => {
     // console.log(data);
 
     useEffect(() => {
-        const successData = fetch('./success_stories.json').then(res => res.json()).then(data => {
+        fetch('./success_stories.json').then(res => res.json()).then(data => {
             setSuccessStories(data)
         })
     }, [])

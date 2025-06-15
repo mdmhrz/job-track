@@ -26,8 +26,8 @@ export default function Footer() {
                         <li><Link to='/' className="link link-hover">Home</Link></li>
                         <li><Link to='/about' className="link link-hover">About</Link></li>
                         <li><Link to='/contact' className="link link-hover">Contact</Link></li>
-                        <li><Link to='/login' className="link link-hover">Login</Link></li>
-                        <li><Link to='/register' className="link link-hover">Register</Link></li>
+                        <li><Link to='auth/login' className="link link-hover">Login</Link></li>
+                        <li><Link to='auth/register' className="link link-hover">Register</Link></li>
                     </ul>
                 </div>
 

@@ -12,6 +12,7 @@ import Contact from "../Pages/Contact";
 import Loading from "../Pages/Loading";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
+import HotJobs from "../Pages/HotJobs";
 
 const router = createBrowserRouter([
     {
@@ -25,14 +26,14 @@ const router = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <PrivateRoute><Contact></Contact></PrivateRoute>
+                element: <Contact></Contact>
             },
             {
-                path: '/login',
+                path: '/auth/login',
                 element: <Login></Login>
             },
             {
-                path: '/register',
+                path: '/auth/register',
                 element: <Register></Register>
             },
             {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/myProfile',
                 element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+            },
+            {
+                path: '/hotJobs',
+                element: <PrivateRoute><HotJobs></HotJobs></PrivateRoute>
             }
         ]
     },

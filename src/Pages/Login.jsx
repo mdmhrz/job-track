@@ -1,74 +1,82 @@
-import { FaUserAlt, FaLock, FaGoogle, FaGithub } from "react-icons/fa";
+import { FaUserAlt, FaLock } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
-import { Link, useLocation, useNavigate } from "react-router"; // ✅ Corrected import
+import { Link, useLocation, useNavigate } from "react-router";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-
-
-    const [error, setError] = useState('')
-
-
-    const { signIn, googleSignIn, forgotPassword } = useContext(AuthContext)
+    const [email, setEmail] = useState("");
+    const { signIn, googleSignIn, forgotPassword } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-
 
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(email, password);
 
-        signIn(email, password).then(result => {
-            const user = result.user;
-            // console.log(user);
-            toast.success("You've succefully logged in")
-            navigate(`${location.state ? location.state : "/"}`)
+        signIn(email, password)
+            .then((result) => {
+                toast.success("You've successfully logged in!");
+                navigate(location.state ? location.state : "/");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                let message = "Something went wrong.";
 
-        }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // alert(errorMessage, errorCode)
-            setError(errorCode)
-        });
-    }
+                switch (errorCode) {
+                    case "auth/user-not-found":
+                        message = "No account found with this email.";
+                        break;
+                    case "auth/wrong-password":
+                        message = "Incorrect password. Please try again.";
+                        break;
+                    case "auth/invalid-email":
+                        message = "Please enter a valid email address.";
+                        break;
+                    case "auth/invalid-credential":
+                        message = "Invalid email or password.";
+                        break;
+                    case "auth/too-many-requests":
+                        message = "Too many login attempts. Try again later.";
+                        break;
+                    default:
+                        message = "Login failed. Please check your credentials.";
+                }
+
+                toast.error(message);
+            });
+
+    };
 
     const handleGoogleLogin = () => {
-        googleSignIn().then(result => {
-            const user = result.user;
-            // console.log(user);
-            navigate(`${location.state ? location.state : "/"}`)
-            toast.success("You've succefully logged in")
-
-        }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // alert(errorMessage, errorCode)
-            setError(errorCode)
-        });
+        googleSignIn()
+            .then((result) => {
+                toast.success("You've successfully logged in!");
+                navigate(location.state ? location.state : "/");
+            })
+            .catch((error) => {
+                toast.error(`Google sign-in failed: ${error.message}`);
+            });
     };
 
     const handleForgotPassword = () => {
         if (!email) {
-            return alert("Please enter your email to reset password.");
+            toast.warn("Please enter your email to reset password.");
+            return;
         }
 
         forgotPassword(email)
             .then(() => {
-                alert('A reset email has been sent to your email.');
+                toast.success("Password reset email sent.");
             })
             .catch((error) => {
-                setError(error.code);
+                toast.error(`Reset failed: ${error.message}`);
             });
     };
-
-
 
     return (
         <div className="bg-base-200 flex items-center justify-center p-6 min-h-[calc(100vh-64px)]">
@@ -118,16 +126,22 @@ const Login = () => {
                             className="grow"
                             placeholder="Password"
                             name="password"
+                            required
                         />
                     </motion.label>
-
 
                     <div className="flex justify-between text-sm mt-2">
                         <label className="label cursor-pointer">
                             <input type="checkbox" className="checkbox checkbox-primary mr-2" />
                             Remember me
                         </label>
-                        <a onClick={handleForgotPassword} className="link link-hover text-primary">Forgot Password?</a>
+                        <button
+                            type="button"
+                            onClick={handleForgotPassword}
+                            className="link link-hover text-primary"
+                        >
+                            Forgot Password?
+                        </button>
                     </div>
 
                     <motion.button
@@ -143,17 +157,15 @@ const Login = () => {
                 {/* Social Login Options */}
                 <div className="mt-6">
                     <small className="divider">OR</small>
-                    <div className="">
-                        <motion.button
-                            onClick={handleGoogleLogin}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="btn btn-outline btn-primary flex items-center justify-center gap-2 w-full"
-                        >
-                            <FcGoogle className="text-red-500" />
-                            Continue with Google
-                        </motion.button>
-                    </div>
+                    <motion.button
+                        onClick={handleGoogleLogin}
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="btn btn-outline btn-primary flex items-center justify-center gap-2 w-full"
+                    >
+                        <FcGoogle className="text-xl" />
+                        Continue with Google
+                    </motion.button>
                 </div>
 
                 {/* Register Link */}

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Senior Frontend Developer",
+        "company": "Innovatech Solutions",
+        "location": "San Francisco, CA (Hybrid)",
+        "salary": "$120,000 - $150,000",
+        "type": "Full-time",
+        "logo": "https://www.orientsoftware.com/Themes/Content/Images/blog/2024-08-12/senior-front-end-dev-vs-mid-level.webp",
+        "badgeColor": "#3B82F6",
+        "salaryColor": "#10B981",
+        "desc": "We are looking for an experienced Frontend Developer to join our dynamic team. You will be responsible for building responsive web..."
+    },
+    {
+        "id": 2,
+        "title": "UX/UI Designer",
+        "company": "Innovatech Solutions",
+        "location": "Remote",
+        "salary": "$90,000 - $120,000",
+        "type": "Full-time",
+        "logo": "https://images.ctfassets.net/wp1lcwdav1p1/585Wul8GGcz8X4duQ8ifmz/813766bae0ad07e41a7e82ecbe2439b8/ux-designer.JPG?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive",
+        "badgeColor": "#3B82F6",
+        "salaryColor": "#10B981",
+        "desc": "Join our product team to create intuitive and engaging user experiences. You'll work closely with product managers and developers to desi..."
+    },
+    {
+        "id": 3,
+        "title": "Data Scientist",
+        "company": "DataSphere Analytics",
+        "location": "Boston, MA",
+        "salary": "$130,000 - $160,000",
+        "type": "Full-time",
+        "logo": "https://s44783.pcdn.co/in/wp-content/uploads/sites/3/2022/09/data-scientist.jpg.optimal.jpg",
+        "badgeColor": "#3B82F6",
+        "salaryColor": "#10B981",
+        "desc": "As a Data Scientist at DataSphere Analytics, you will analyze complex datasets to extract insights that drive business decisions. You'll develop..."
+    }
+]
