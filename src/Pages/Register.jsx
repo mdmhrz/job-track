@@ -208,7 +208,7 @@ const Register = () => {
 
                     <motion.div className="text-center mt-6 text-sm" variants={itemVariants}>
                         Already have an account?{" "}
-                        <Link to="/login" className="link link-primary font-semibold">
+                        <Link to="/auth/login" className="link link-primary font-semibold">
                             Login
                         </Link>
                     </motion.div>

@@ -13,6 +13,8 @@ import Loading from "../Pages/Loading";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
 import HotJobs from "../Pages/HotJobs";
+import ForgotPassword from "../Pages/ForgotPassword";
+import UpdateProfile from "../Pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
+                path: '/auth/forgotPassword',
+                element: <ForgotPassword></ForgotPassword>
+            },
+            {
                 path: '/about',
                 Component: About
             },
@@ -47,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: '/hotJobs',
                 element: <PrivateRoute><HotJobs></HotJobs></PrivateRoute>
+            },
+            {
+                path: '/update-profile',
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
             }
         ]
     },

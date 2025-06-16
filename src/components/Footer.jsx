@@ -16,7 +16,7 @@ export default function Footer() {
                 <div>
                     <Link to='/' className="flex items-center gap-3">
                         <img src={logo} className="h-10" alt="" />
-                        <Link to='/' className="text-2xl font-bold"><span className=''>Job</span>Track</Link>
+                        <p to='/' className="text-2xl font-bold"><span className=''>Job</span>Track</p>
                     </Link>
                     <p className="text-sm opacity-80 mt-3">
                         Simplify your job search with powerful tracking tools and career insights. Built for professionals, by professionals.

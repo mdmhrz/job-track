@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const [email, setEmail] = useState("");
+    // const [forgotPasswordEmail, setForgotPasswordEmail] = useState('')
     const { signIn, googleSignIn, forgotPassword } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -64,20 +65,20 @@ const Login = () => {
             });
     };
 
-    const handleForgotPassword = () => {
-        if (!email) {
-            toast.warn("Please enter your email to reset password.");
-            return;
-        }
+    // const handleForgotPassword = () => {
+    //     if (!email) {
+    //         toast.warn("Please enter your email to reset password.");
+    //         return;
+    //     }
 
-        forgotPassword(email)
-            .then(() => {
-                toast.success("Password reset email sent.");
-            })
-            .catch((error) => {
-                toast.error(`Reset failed: ${error.message}`);
-            });
-    };
+    //     // forgotPassword(email)
+    //     //     .then(() => {
+    //     //         toast.success("Password reset email sent.");
+    //     //     })
+    //     //     .catch((error) => {
+    //     //         toast.error(`Reset failed: ${error.message}`);
+    //     //     });
+    // };
 
     return (
         <>
@@ -140,13 +141,13 @@ const Login = () => {
                                 <input type="checkbox" className="checkbox checkbox-primary mr-2" />
                                 Remember me
                             </label>
-                            <button
-                                type="button"
-                                onClick={handleForgotPassword}
+                            <Link
+                                to='/auth/forgotPassword'
+                                state={{ email }}
                                 className="link link-hover text-primary"
                             >
                                 Forgot Password?
-                            </button>
+                            </Link>
                         </div>
 
                         <motion.button
@@ -176,7 +177,7 @@ const Login = () => {
                     {/* Register Link */}
                     <div className="text-center mt-6 text-sm">
                         Don’t have an account?{" "}
-                        <Link to="/register" className="link link-primary font-semibold">
+                        <Link to="/auth/register" className="link link-primary font-semibold">
                             Register
                         </Link>
                     </div>

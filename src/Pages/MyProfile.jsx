@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 const MyProfile = () => {
     const { user } = useContext(AuthContext);
@@ -41,6 +42,9 @@ const MyProfile = () => {
                             <p className="text-center">
                                 You can manage your profile settings and personal data from this page in future updates.
                             </p>
+                        </div>
+                        <div>
+                            <Link to='/update-profile' className='btn mt-10 btn-primary'>Update Profile</Link>
                         </div>
                     </motion.div>
                 </motion.div>
