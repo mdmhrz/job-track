@@ -1,12 +1,56 @@
-# React + Vite
+# 💼 JobTrack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JobTrack** is a modern web application designed to help users track job applications efficiently. With features like login, registration, personalized dashboards, and application tracking, JobTrack aims to simplify the job search process.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ User authentication (Login / Register)
+- 📄 Dashboard to track job applications
+- 📊 Statistics and analytics
+- 📝 Add / Edit / Delete job entries
+- 🔍 Filter and sort by job type, status, and more
+- 🔒 Secure with Firebase authentication
+- 💡 Built with modern tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React.js
+- Tailwind CSS
+- React Router
+- Framer Motion (for smooth UI animations)
+
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB (with Mongoose)
+
+**Authentication:**
+- Firebase Auth (Email/Password & Google Login)
+
+---
+
+## 📁 Folder Structure
+
+```bash
+job-track/
+├── client/                 # Frontend React code
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── context/
+│       ├── routes/
+│       └── App.jsx
+├── server/                 # Backend Node.js code
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+├── .env
+├── package.json
+└── README.md

@@ -99,7 +99,7 @@ const UpdateProfile = () => {
                         whileTap={{ scale: 0.95 }}
                         disabled={loading}
                     >
-                        {loading ? "Updating..." : "Update Profile"}
+                        {loading ? "Updating..." : "Set Update Data"}
                     </motion.button>
                 </form>
             </motion.div>
