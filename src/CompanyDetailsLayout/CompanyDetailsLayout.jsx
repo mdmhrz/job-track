@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const CompanyDetailsLayout = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             <header className='mb-[64px]'>
                 <Navbar></Navbar>
             </header>

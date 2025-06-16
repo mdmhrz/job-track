@@ -6,6 +6,7 @@ import { FaPhotoFilm } from "react-icons/fa6";
 import { use, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 // Motion variants
 const containerVariants = {
@@ -115,100 +116,105 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-[calc(100vh-64px)] bg-base-200 flex items-center justify-center p-6">
-            <motion.div
-                className="bg-base-100 shadow-xl rounded-2xl p-10 w-full max-w-md"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-            >
-                <motion.h2
-                    className="text-3xl font-bold text-center mb-6 text-primary"
-                    variants={itemVariants}
+        <>
+            <Helmet>
+                <title>Register | JobTrack</title>
+            </Helmet>
+            <div className="min-h-[calc(100vh-64px)] bg-base-200 flex items-center justify-center p-6">
+                <motion.div
+                    className="bg-base-100 shadow-xl rounded-2xl p-10 w-full max-w-md"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
                 >
-                    Create Account
-                </motion.h2>
+                    <motion.h2
+                        className="text-3xl font-bold text-center mb-6 text-primary"
+                        variants={itemVariants}
+                    >
+                        Create Account
+                    </motion.h2>
 
-                <motion.form className="space-y-4" variants={itemVariants} onSubmit={handleRegister}>
-                    <label className="input input-bordered flex items-center gap-2 w-full">
-                        <FaUserAlt className="text-primary" />
-                        <input
-                            type="text"
-                            className="grow"
-                            placeholder="Full Name"
-                            name="name"
-                            required
-                            onChange={handleNameOnChange}
-                            value={name}
-                        />
-                    </label>
-                    {nameError && <small className="text-red-500">{nameError}</small>}
+                    <motion.form className="space-y-4" variants={itemVariants} onSubmit={handleRegister}>
+                        <label className="input input-bordered flex items-center gap-2 w-full">
+                            <FaUserAlt className="text-primary" />
+                            <input
+                                type="text"
+                                className="grow"
+                                placeholder="Full Name"
+                                name="name"
+                                required
+                                onChange={handleNameOnChange}
+                                value={name}
+                            />
+                        </label>
+                        {nameError && <small className="text-red-500">{nameError}</small>}
 
-                    <label className="input input-bordered flex items-center gap-2 w-full">
-                        <FaPhotoFilm className="text-primary" />
-                        <input type="text" className="grow" placeholder="Photo URL" name="photo" />
-                    </label>
+                        <label className="input input-bordered flex items-center gap-2 w-full">
+                            <FaPhotoFilm className="text-primary" />
+                            <input type="text" className="grow" placeholder="Photo URL" name="photo" />
+                        </label>
 
-                    <label className="input input-bordered flex items-center gap-2 w-full">
-                        <FaEnvelope className="text-primary" />
-                        <input
-                            type="email"
-                            className="grow"
-                            placeholder="Email Address"
-                            name="email"
-                            required
-                        />
-                    </label>
+                        <label className="input input-bordered flex items-center gap-2 w-full">
+                            <FaEnvelope className="text-primary" />
+                            <input
+                                type="email"
+                                className="grow"
+                                placeholder="Email Address"
+                                name="email"
+                                required
+                            />
+                        </label>
 
-                    <label className="input input-bordered flex items-center gap-2 w-full">
-                        <FaLock className="text-primary" />
-                        <input
-                            type="password"
-                            className="grow"
-                            placeholder="Password"
-                            name="password"
-                            onChange={handlePasswordOnChange}
-                            value={password}
-                            required
-                        />
-                    </label>
-                    {passwordError && <small className="text-red-500">{passwordError}</small>}
+                        <label className="input input-bordered flex items-center gap-2 w-full">
+                            <FaLock className="text-primary" />
+                            <input
+                                type="password"
+                                className="grow"
+                                placeholder="Password"
+                                name="password"
+                                onChange={handlePasswordOnChange}
+                                value={password}
+                                required
+                            />
+                        </label>
+                        {passwordError && <small className="text-red-500">{passwordError}</small>}
+
+                        <motion.button
+                            type="submit"
+                            className="btn btn-primary w-full mt-4"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            disabled={loading || nameError || passwordError}
+                        >
+                            {loading ? "Registering..." : "Register"}
+                        </motion.button>
+                    </motion.form>
+
+                    <motion.div className="divider text-sm mt-6" variants={itemVariants}>
+                        or
+                    </motion.div>
 
                     <motion.button
-                        type="submit"
-                        className="btn btn-primary w-full mt-4"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        disabled={loading || nameError || passwordError}
+                        className="btn btn-outline w-full flex items-center justify-center gap-2"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.97 }}
+                        variants={itemVariants}
+                        onClick={handleGoogleSignUp}
+                        disabled={loading}
                     >
-                        {loading ? "Registering..." : "Register"}
+                        <FcGoogle size={20} />
+                        Continue with Google
                     </motion.button>
-                </motion.form>
 
-                <motion.div className="divider text-sm mt-6" variants={itemVariants}>
-                    or
+                    <motion.div className="text-center mt-6 text-sm" variants={itemVariants}>
+                        Already have an account?{" "}
+                        <Link to="/login" className="link link-primary font-semibold">
+                            Login
+                        </Link>
+                    </motion.div>
                 </motion.div>
-
-                <motion.button
-                    className="btn btn-outline w-full flex items-center justify-center gap-2"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    variants={itemVariants}
-                    onClick={handleGoogleSignUp}
-                    disabled={loading}
-                >
-                    <FcGoogle size={20} />
-                    Continue with Google
-                </motion.button>
-
-                <motion.div className="text-center mt-6 text-sm" variants={itemVariants}>
-                    Already have an account?{" "}
-                    <Link to="/login" className="link link-primary font-semibold">
-                        Login
-                    </Link>
-                </motion.div>
-            </motion.div>
-        </div>
+            </div>
+        </>
     );
 };
 

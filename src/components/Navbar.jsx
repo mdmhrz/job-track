@@ -4,6 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 import { IoMdMenu } from 'react-icons/io';
 import { toast } from 'react-toastify';
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -26,7 +27,7 @@ const Navbar = () => {
             <li><NavLink to='/about'>About</NavLink></li>
             <li><NavLink to='/contact'>Contact</NavLink></li>
             {
-                user && <li><NavLink to='/hotJobs'>Featured Jobs</NavLink></li>
+                user && <li><NavLink to='/hotJobs'>Hot Jobs</NavLink></li>
             }
         </>
     );
@@ -39,9 +40,12 @@ const Navbar = () => {
                     <button onClick={() => setIsDrawerOpen(true)} className="lg:hidden text-2xl">
                         <IoMdMenu />
                     </button>
-                    <Link to='/' className="text-xl font-bold ml-4">
-                        <span className='text-blue-600'>Job</span>Track
-                    </Link>
+                    <div className='flex items-center justify-center'>
+                        <img src={logo} className='h-10' alt="" />
+                        <Link to='/' className="text-xl text-[26px] font-bold ml-4">
+                            <span className='text-blue-600'>Job</span>Track
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="navbar-end hidden lg:flex items-center gap-6">

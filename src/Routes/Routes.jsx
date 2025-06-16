@@ -53,6 +53,7 @@ const router = createBrowserRouter([
     {
         path: '/company-details',
         Component: CompanyDetailsLayout,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/company-details/:id',

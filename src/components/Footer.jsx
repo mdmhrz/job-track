@@ -1,6 +1,7 @@
 import { FaFacebookF, FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import logo from '../assets/logo.png'
 
 export default function Footer() {
     return (
@@ -13,7 +14,10 @@ export default function Footer() {
             <div className="w-11/12 mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Brand Info */}
                 <div>
-                    <Link to='/' className="text-xl font-bold"><span className='text-primary'>Job</span>Track</Link>
+                    <Link to='/' className="flex items-center gap-3">
+                        <img src={logo} className="h-10" alt="" />
+                        <Link to='/' className="text-2xl font-bold"><span className=''>Job</span>Track</Link>
+                    </Link>
                     <p className="text-sm opacity-80 mt-3">
                         Simplify your job search with powerful tracking tools and career insights. Built for professionals, by professionals.
                     </p>

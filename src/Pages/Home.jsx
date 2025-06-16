@@ -4,6 +4,7 @@ import HowItWorks from '../components/HowItWorks';
 import TopCompanies from '../components/TopCompanies';
 import Stats from '../components/Stats';
 import SuccessStories from '../components/SuccessStories';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 
@@ -14,15 +15,21 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <Banner onFindJobsClick={scrollToTopCompanies}></Banner>
-            <HowItWorks></HowItWorks>
-            <div ref={topCompaniesRef}>
-                <TopCompanies></TopCompanies>
-            </div>
-            <Stats></Stats>
-            <SuccessStories></SuccessStories>
-        </div >
+        <>
+            <Helmet>
+                <title>Home | JobTrack</title>
+            </Helmet>
+
+            <div>
+                <Banner onFindJobsClick={scrollToTopCompanies}></Banner>
+                <HowItWorks></HowItWorks>
+                <div ref={topCompaniesRef}>
+                    <TopCompanies></TopCompanies>
+                </div>
+                <Stats></Stats>
+                <SuccessStories></SuccessStories>
+            </div >
+        </>
     );
 };
 
