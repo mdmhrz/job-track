@@ -3,7 +3,7 @@
 **JobTrack** is a modern web application designed to help users track their job applications efficiently. Featuring user authentication, personalized dashboards, job filtering, and application status tracking, JobTrack simplifies your job search journey.
 
 🔗 **Live Demo:** [https://job-track-53365.web.app/](https://job-track-53365.web.app/)  
-📂 **GitHub Repo:** [https://github.com/Black-Catt/JobTrack](https://github.com/Black-Catt/JobTrack](https://github.com/mdmhrz/job-track?tab=readme-ov-file))
+📂 **GitHub Repo:** [https://github.com/mdmhrz/job-track](https://github.com/mdmhrz/job-track)
 
 ---
 
